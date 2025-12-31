@@ -9,17 +9,22 @@
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     line-height: 1.6;
+
 }
 
 header {
     border-bottom: 1px solid #e0e0e0;
     padding: 0 40px;
     position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 nav {
     display: flex;
+
     justify-content: space-between;
     align-items: center;
     max-width: 1200px;
@@ -50,9 +55,11 @@ nav {
     color: blue;
 }
 
+/* Main Content */
 main {
     min-height: calc(100vh - 140px);
 }
+
 
 
 .hero {
