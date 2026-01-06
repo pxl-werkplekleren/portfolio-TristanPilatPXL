@@ -1,17 +1,16 @@
 * {
-    margin:  0;
+    margin: 0;
     padding: 0;
-    box-sizing:  border-box;
+    box-sizing: border-box;
 }
-
-
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     line-height: 1.6;
-
+    background: white;
 }
 
+/* Header & Nav */
 header {
     border-bottom: 1px solid #e0e0e0;
     padding: 0 40px;
@@ -24,7 +23,6 @@ header {
 
 nav {
     display: flex;
-
     justify-content: space-between;
     align-items: center;
     max-width: 1200px;
@@ -32,16 +30,13 @@ nav {
     height: 70px;
 }
 
-
 .nav-links {
     display: flex;
     gap: 30px;
     align-items: center;
 }
 
-.nav-links li {
-    display: inline-block;
-}
+.nav-links li { display: inline-block; }
 
 .nav-links a {
     text-decoration: none;
@@ -51,31 +46,22 @@ nav {
     position: relative;
 }
 
-.nav-links a:hover {
-    color: blue;
-}
+.nav-links a:hover { color: blue; }
 
 /* Main Content */
-main {
-    min-height: calc(100vh - 140px);
-}
+main { min-height: calc(100vh - 140px); }
 
-
-
-.hero {
-    text-align: center;
-}
+.hero { text-align: center; }
 
 .hero-title {
     margin-top: 40px;
-    font-size:  48px;
+    font-size: 48px;
     font-weight: 700;
     margin-bottom: 12px;
     color: #1a1a1a;
 }
 
 .hero-description {
-
     font-size: 20px;
     color: #666;
     margin-bottom: 40px;
@@ -83,22 +69,30 @@ main {
 
 .page-title {
     font-size: 42px;
-    font-weight:  700;
+    font-weight: 700;
     margin-bottom: 16px;
     color: #1a1a1a;
 }
 
-.card-border, .card{
-    border-bottom: lightgray solid 3px;
-    border-left: lightgray solid 3px;
-
-
-
+.title-between {
+    margin-top: 5rem;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #1a1a1a;
 }
 
-
+/* Card styling */
+.card-border,
+.card , .scratch-card {
+    border-bottom: lightgray solid 3px;
+    border-left: lightgray solid 3px;
+}
 
 .card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;            /* ruimte tussen header en content */
     background: white;
     border-radius: 12px;
     padding: 30px;
@@ -108,131 +102,52 @@ main {
 
 .card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 24px rgba(0, 0, 0, 0.1);
 }
 
-
-
-.card-title {
-    font-size: 24px;
-    font-weight:  600;
-    margin-bottom: 16px;
-    color: #1a1a1a;
-}
-
-
-
-.card-text {
-    font-size: 16px;
-    color: #4a4a4a;
-    line-height: 1.8;
-}
-
-/* Card Container (3 kolommen) */
-.card-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 24px;
-    margin-top: 40px;
-}
-
-
-
-.card-skill {
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 8px;
-    text-align: center;
-    color: #1a1a1a;
-}
-
-
-
-/* Logboek Container */
-.logboek-container {
+/* Header: badge links, GIF rechts */
+.card-header {
     display: flex;
-    flex-direction: column;
-    gap: 24px;
-    margin-top: 32px;
-}
-
-/* Reflectie Container */
-.reflectie-container {
-    display:  flex;
-    flex-direction:  column;
-    gap: 24px;
-    margin-top: 32px;
-}
-
-/* Activity List */
-.activity-list {
-    margin:  16px 0;
-    padding-left: 24px;
-}
-
-.activity-list li {
-    margin-bottom: 8px;
-    color: #4a4a4a;
-}
-
-/* ...  Logboek css ... */
-
-.week-card {
-    background: white;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease;
-    border-bottom: lightgray solid 3px;
-
-
-}
-
-.week-card:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.week-header {
-    display: flex;
-    align-items: center;
+    justify-content: space-between;
+    align-items: flex-start;
     gap: 16px;
-    padding:  20px 24px;
-    border-bottom:  1px solid #f0f0f0;
-}
-
-.week-badge {
-    background-color: #3b82f6;
-
-    color: white;
-    padding: 6px 16px;
-    border-radius:  6px;
-    font-size:  14px;
-    font-weight: 600;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 
+.card-header > div:first-child { flex: 1; }
 
-.week-date {
-    font-size: 16px;
-    color: #666;
+.gif-container {
+    width: 30%;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    flex-shrink: 0;
 }
 
+.gif-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+/* Content */
 .week-content {
-    padding: 24px;
+    margin-top: 0;
+    padding-top: 0;
 }
 
 .section-title {
     font-size: 16px;
-    font-weight:  600;
+    font-weight: 600;
     color: #1a1a1a;
     margin-bottom: 12px;
-    margin-top: 20px;
+    margin-top: 40px;
     display: flex;
     align-items: center;
     gap: 8px;
 }
-
-
 
 .content-list li {
     padding: 8px 0 8px 24px;
@@ -242,19 +157,90 @@ main {
 }
 
 .content-list li::before {
-    content:  "•";
+    content: "•";
     position: absolute;
     left: 8px;
     color: #3b82f6;
     font-weight: bold;
 }
-.container{
-    margin: 2rem;
 
+/* Layout helpers */
+.card-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #1a1a1a;
 }
 
+.card-text {
+    font-size: 16px;
+    color: #4a4a4a;
+    line-height: 1.8;
+}
 
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    margin-top: 40px;
+}
 
+.card-skill {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-align: center;
+    color: #1a1a1a;
+}
+
+/* Logboek & Reflectie */
+.logboek-container,
+.reflectie-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 32px;
+}
+
+/* Week cards */
+.week-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    border-bottom: lightgray solid 3px;
+}
+
+.week-card:hover { box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); }
+
+.week-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 24px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.week-badge {
+    background-color: #3b82f6;
+    color: white;
+    padding: 6px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.week-date {
+    font-size: 16px;
+    color: #666;
+}
+
+.week-content { padding: 24px; }
+
+.container { margin: 2rem; }
+
+/* Footer */
 footer {
     background-color: white;
     border-top: 1px solid #e0e0e0;
@@ -264,6 +250,7 @@ footer {
     font-size: 14px;
 }
 
+/* Skills */
 .skills-logos {
     display: flex;
     justify-content: center;
@@ -282,7 +269,64 @@ footer {
 }
 
 .skill-logo:hover {
-    transform:  scale(1.2);
+    transform: scale(1.2);
     filter: grayscale(0%);
 }
 
+/* Scope alleen voor Scratch card */
+.scratch-card {
+    display: grid;
+    grid-template-columns: 1fr 30%;
+    gap: 16px;
+    align-items: start;
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 24px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.scratch-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 24px rgba(0, 0, 0, 0.1);
+}
+
+.scratch-card__left {
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* ruimte tussen badge en content */
+}
+
+.scratch-card__header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+}
+
+.scratch-card__content {
+    margin: 0;
+    padding: 0;
+}
+
+.scratch-card__gif {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-shrink: 0;
+}
+
+.scratch-card__gif img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+/* Optioneel: compacter voor deze sectie-titels in deze card */
+.scratch-card .section-title {
+    margin: 12px 0;
+}
