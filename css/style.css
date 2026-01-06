@@ -55,11 +55,14 @@ nav {
     text-decoration: none;
     color: #666;
     font-size: 15px;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease, text-decoration 0.3s ease;
     position: relative;
 }
 
-.nav-links a:hover { color: blue; }
+.nav-links a:hover {
+    color: #3b82f6;
+    text-decoration: underline;
+}
 
 
 .hero { text-align: center; }
@@ -161,7 +164,6 @@ nav {
     font-weight: 600;
     color: #1a1a1a;
     margin-bottom: 12px;
-    margin-top: 40px;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -236,7 +238,7 @@ nav {
     align-items: center;
     gap: 16px;
     padding: 20px 24px;
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 1px solid #e0e0e0;
 }
 
 .week-badge {
@@ -246,6 +248,7 @@ nav {
     border-radius: 6px;
     font-size: 14px;
     font-weight: 600;
+
 }
 
 .week-date {
@@ -313,7 +316,6 @@ footer {
 .scratch-card__left {
     display: flex;
     flex-direction: column;
-    gap: 12px;
 }
 
 .scratch-card__header {
@@ -327,7 +329,7 @@ footer {
 
 .scratch-card__content {
     margin: 0;
-    padding: 0;
+    padding: 24px;
 }
 
 .scratch-card__gif {
