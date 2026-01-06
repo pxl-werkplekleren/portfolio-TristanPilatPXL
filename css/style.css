@@ -43,7 +43,7 @@ nav {
 
     .logo {
         font-weight: 600;
-        margin-right: 8px; /* optioneel: kleine ruimte voor de links */
+        margin-right: 8px;
     }
 
 
@@ -113,7 +113,7 @@ nav {
 
 .card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 15px 24px rgba(0, 0, 0, 0.1);
+    box-shadow: -6px 6px 0 0 rgba(0, 0, 0, 0.2);
 }
 
 .card-header {
@@ -142,10 +142,13 @@ nav {
     border-radius: 15px;
 }
 
-/* Content */
 .week-content {
     margin-top: 0;
     padding-top: 0;
+}
+
+.page-title, .title-between {
+    text-decoration: underline;
 }
 
 .section-title {
@@ -220,7 +223,8 @@ nav {
     border-bottom: lightgray solid 3px;
 }
 
-.week-card:hover { box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); }
+.week-card:hover { box-shadow: -6px 6px 0 0 rgba(0, 0, 0, 0.2);
+}
 
 .week-header {
     display: flex;
@@ -293,7 +297,8 @@ footer {
 
 .scratch-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 15px 24px rgba(0, 0, 0, 0.1);
+    box-shadow: -6px 6px 0 0 rgba(0, 0, 0, 0.2);
+
 }
 
 .scratch-card__left {
