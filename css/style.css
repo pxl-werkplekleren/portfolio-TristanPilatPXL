@@ -108,12 +108,17 @@ nav {
     border-radius: 12px;
     padding: 30px;
     margin-bottom: 24px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-right: 1px solid transparent;
+    border-top: 1px solid transparent;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-4px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    transform: translateY(-3px);
     box-shadow: -6px 6px 0 0 rgba(0, 0, 0, 0.2);
+    border-right: lightgray solid 1px ;
+    border-top: lightgray solid 1px ;
 }
 
 .card-header {
@@ -292,12 +297,16 @@ footer {
     border-radius: 12px;
     padding: 30px;
     margin-bottom: 24px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease , border-color 0.3s ease;
+    border-right: 1px solid transparent;
+    border-top: 1px solid transparent;
 }
 
 .scratch-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-3px);
     box-shadow: -6px 6px 0 0 rgba(0, 0, 0, 0.2);
+    border-right: lightgray solid 1px ;
+    border-top: lightgray solid 1px ;
 
 }
 
