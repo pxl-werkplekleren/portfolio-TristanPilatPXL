@@ -159,15 +159,7 @@ nav {
     text-decoration: underline;
 }
 
-.section-title {
-    font-size: 16px;
-    font-weight: 600;
-    color: #1a1a1a;
-    margin-bottom: 12px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
+
 
 .content-list li {
     padding: 8px 0 8px 24px;
@@ -195,6 +187,17 @@ nav {
     font-size: 16px;
     color: #4a4a4a;
     line-height: 1.8;
+    margin-bottom: 20px;
+
+}
+
+.section-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .card-container {
@@ -292,10 +295,11 @@ footer {
 }
 
 .scratch-card {
+    align-items: center; /* verticaal centreren */
+
     display: grid;
     grid-template-columns: 1fr 30%;
     gap: 16px;
-    align-items: start;
     background: white;
     border-radius: 12px;
     padding: 30px;
@@ -344,9 +348,7 @@ footer {
 .scratch-card__gif img {
     max-width: 100%;
     height: auto;
+    justify-content: center;
     border-radius: 15px;
 }
 
-.scratch-card .section-title {
-    margin: 12px 0;
-}
