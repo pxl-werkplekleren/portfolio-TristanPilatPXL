@@ -4,25 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Logboek - Tristan Pilat</title>
+    <title>Opdrachten - Tristan Pilat</title>
 </head>
 <body>
+<a href="#main-content" class="skip-link">Ga naar inhoud</a>
 <header>
-    <nav>
-        <div class="logo">Tristan Pilat</div>
-        <ul class="nav-links">
-            <li><a href="index.html" class="active">Introductie</a></li>
-            <li><a href="Logboek.html">Logboek</a></li>
-            <li><a href="Ontwikkeling.html">Ontwikkeling</a></li>
-            <li><a href="Opdrachten.html">Opdrachten</a></li>
-            <li><a href="Reflectie.html">Reflectie</a></li>
+    <nav aria-label="Hoofdnavigatie">
+        <div class="logo"><a href="index.html">Tristan Pilat</a></div>
+        <button class="hamburger" aria-label="Menu openen" aria-expanded="false" aria-controls="nav-menu">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projecten.html">Projecten</a></li>
+            <li><a href="wpl2-case.html">WPL2 Case</a></li>
+            <li class="dropdown">
+                <button class="dropdown-toggle dropdown-active" aria-expanded="false" aria-haspopup="true">
+                    Leertraject <span class="arrow" aria-hidden="true">▾</span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="Logboek.html"><span class="dd-icon">📅</span><span class="dd-body"><span class="dd-title">Logboek</span><span class="dd-desc">14 weken activiteiten</span></span></a></li>
+                    <li><a href="Ontwikkeling.html"><span class="dd-icon">👤</span><span class="dd-body"><span class="dd-title">Ontwikkeling</span><span class="dd-desc">Vijf rollen &amp; OLR</span></span></a></li>
+                    <li><a href="Opdrachten.html" class="active"><span class="dd-icon">📝</span><span class="dd-body"><span class="dd-title">Opdrachten</span><span class="dd-desc">WPL1 &amp; WPL2 opdrachten</span></span></a></li>
+                    <li><a href="Reflectie.html"><span class="dd-icon">💭</span><span class="dd-body"><span class="dd-title">Reflectie</span><span class="dd-desc">AIM &amp; kernkwadranten</span></span></a></li>
+                    <li><a href="documentatie.html"><span class="dd-icon">📚</span><span class="dd-body"><span class="dd-title">Documentatie</span><span class="dd-desc">Alle pagina's &amp; downloads</span></span></a></li>
+                </ul>
+            </li>
+            <li><a href="index.html#contact">Contact</a></li>
         </ul>
     </nav>
 </header>
+<nav class="subnav" aria-label="Leertraject navigatie">
+    <div class="container">
+        <a href="Logboek.html" class="subnav-link"><span class="subnav-icon">📅</span> Logboek</a>
+        <a href="Ontwikkeling.html" class="subnav-link"><span class="subnav-icon">👤</span> Ontwikkeling</a>
+        <a href="Opdrachten.html" class="subnav-link active"><span class="subnav-icon">📝</span> Opdrachten</a>
+        <a href="Reflectie.html" class="subnav-link"><span class="subnav-icon">💭</span> Reflectie</a>
+        <a href="documentatie.html" class="subnav-link"><span class="subnav-icon">📚</span> Documentatie</a>
+    </div>
+</nav>
 
-<main>
-    <section class="container">
-        <h1 class="page-title">Opdrachten</h1>
+<main id="main-content">
+<section class="page-hero-section">
+    <div class="hero-bg" aria-hidden="true">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+    <div class="page-hero-inner container">
+        <h1 class="page-hero-title">Opdrachten</h1>
+        <p class="page-hero-sub">Alle projecten en opdrachten van Werkplekleren 1</p>
+    </div>
+</section>
+    <section class="container section-pad">
 
         <div class="scratch-card">
             <div class="scratch-card__left">
@@ -168,7 +201,7 @@
                 </div>
             </div>
             <div class="scratch-card__gif">
-                <img src="Images/html&css.png" alt="Scratch game">
+                <img src="Images/html-css.png" alt="HTML &amp; CSS recreatie">
             </div>
 
         </div>
@@ -265,7 +298,9 @@
 </main>
 
 <footer>
-    <p>&copy; 2025 Tristan Pilat - Graduaat Programmeren</p>
+    <p>&copy; 2026 Tristan Pilat — Graduaat Programmeren · Hogeschool PXL</p>
 </footer>
+<script src="js/nav.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
