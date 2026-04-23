@@ -4,136 +4,158 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Logboek - Tristan Pilat</title>
+    <title>Reflectie - Tristan Pilat</title>
 </head>
 <body>
+<a href="#main-content" class="skip-link">Ga naar inhoud</a>
 <header>
-    <nav>
-        <div class="logo">Tristan Pilat</div>
-        <ul class="nav-links">
-            <li><a href="index.html" class="active">Introductie</a></li>
-            <li><a href="Logboek.html">Logboek</a></li>
-            <li><a href="Ontwikkeling.html">Ontwikkeling</a></li>
-            <li><a href="Opdrachten.html">Opdrachten</a></li>
-            <li><a href="Reflectie.html">Reflectie</a></li>
+    <nav aria-label="Hoofdnavigatie">
+        <div class="logo"><a href="index.html">Tristan Pilat</a></div>
+        <button class="hamburger" aria-label="Menu openen" aria-expanded="false" aria-controls="nav-menu">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projecten.html">Projecten</a></li>
+            <li><a href="wpl2-case.html">WPL2 Case</a></li>
+            <li class="dropdown">
+                <button class="dropdown-toggle dropdown-active" aria-expanded="false" aria-haspopup="true">
+                    Leertraject <span class="arrow" aria-hidden="true">▾</span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="Logboek.html"><span class="dd-icon">📅</span><span class="dd-body"><span class="dd-title">Logboek</span><span class="dd-desc">14 weken activiteiten</span></span></a></li>
+                    <li><a href="Ontwikkeling.html"><span class="dd-icon">👤</span><span class="dd-body"><span class="dd-title">Ontwikkeling</span><span class="dd-desc">Vijf rollen &amp; OLR</span></span></a></li>
+                    <li><a href="Opdrachten.html"><span class="dd-icon">📝</span><span class="dd-body"><span class="dd-title">Opdrachten</span><span class="dd-desc">WPL1 &amp; WPL2 opdrachten</span></span></a></li>
+                    <li><a href="Reflectie.html" class="active"><span class="dd-icon">💭</span><span class="dd-body"><span class="dd-title">Reflectie</span><span class="dd-desc">AIM &amp; kernkwadranten</span></span></a></li>
+                    <li><a href="documentatie.html"><span class="dd-icon">📚</span><span class="dd-body"><span class="dd-title">Documentatie</span><span class="dd-desc">Alle pagina's &amp; downloads</span></span></a></li>
+                </ul>
+            </li>
+            <li><a href="index.html#contact">Contact</a></li>
         </ul>
     </nav>
 </header>
-
-<main>
-
-    <section class="container">
-        <h1 class="page-title">Reflectie</h1>
-
-    <table class="reflectie">
-        <thead>
-        <tr>
-            <th style="width:35%;">Onderdeel</th>
-            <th>Antwoord</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>
-                <img src="Images/positief.png" alt="blije smiley" style="height:28px; vertical-align:middle; margin-right:8px;">
-            </td>
-            <td>
-                <h1 class="section-title">Wat vond je een bijzonder positief element van Werkplekleren 1?</h1>
-                <p class="card-text">Tijdens Werkplekleren 1 nam ik deel aan een praktijkgerichte leerperiode binnen de opleiding, zonder dat dit een stage was. De activiteiten vonden plaats in een gesimuleerde werkomgeving die de werking van een echt IT-bedrijf nabootste. In deze context werkte ik samen met medestudenten aan opdrachten die aansloten bij realistische IT-situaties, zoals het analyseren van problemen, het uitvoeren van eenvoudige technische taken en het rapporteren van resultaten. Deze periode bood een eerste kennismaking met professionele werkmethodes, verantwoordelijkheid en samenwerken binnen een IT-context.</p></td>
-        </tr>
-        <tr>
-            <td>
-                <img src="Images/minder_leuk.png" alt="blije smiley" style="height:28px; vertical-align:middle; margin-right:8px;">
-            </td>
-            <td>
-                <h1 class="section-title">Wat vond je een minder leuk element van Werkplekleren 1?</h1>
-                <p class="card-text">Het onderdeel dat mij het meest positief heeft verrast, waren de individuele opdrachten. Ik vond het leerrijk om zelfstandig aan realistische taken te werken en zelf verantwoordelijkheid te dragen voor de uitvoering en het resultaat. Deze opdrachten gaven mij de kans om in mijn eigen tempo problemen te analyseren, oplossingen uit te werken en mijn vaardigheden stap voor stap te verbeteren. Hierdoor kreeg ik meer inzicht in mijn eigen sterktes en werkpunten binnen een IT-context.</p></td>
-        </tr>
-        <tr>
-            <td>
-                <img src="Images/inzichten.png" alt="minder leuke emotie" style="height:28px; vertical-align:middle; margin-right:8px;">
-            </td>
-            <td>
-                <h1 class="section-title">Welke nieuwe inzichten neem je mee uit Werkplekleren 1?</h1>
-                <p class="card-text">Eigenlijk was er geen specifiek element van Werkplekleren 1 dat ik als minder leuk heb ervaren. De opdrachten waren duidelijk en leerrijk, en de manier van werken gaf een goed beeld van wat er van mij verwacht werd binnen een professionele context. Over het algemeen heb ik deze periode als positief en nuttig ervaren.</p></td>
-        </tr>
-        <tr>
-            <td>
-                <img src="Images/succes.png" alt="minder leuke emotie" style="height:28px; vertical-align:middle; margin-right:8px;">
-            </td>
-            <td>
-                <h1 class="section-title">Wat zou je een persoonlijk succes noemen tijdens Werkplekleren 1? Waarop ben je trots?</h1>
-                <p class="card-text">Tijdens Werkplekleren 1 heb ik wel enkele frustraties en moeilijkheden ervaren. Soms was het niet meteen duidelijk wat er precies verwacht werd bij bepaalde opdrachten, waardoor ik extra tijd nodig had om alles goed te begrijpen. Daarnaast vond ik het af en toe moeilijk om zelfstandig tot een oplossing te komen wanneer ik vastzat, omdat ik niet altijd direct feedback kreeg. Deze momenten waren soms frustrerend, maar ze hebben me wel geholpen om zelfstandiger te worden en door te zetten.</p></td>
-        </tr>
-
-        </tbody>
-    </table>
-
-
-    <h3 class="title-between">Wat neem ik mee naar volgende WPL</h3>
-    <div class="card">
-        <div class="week-header">
-            <span class="week-badge">
-                Kernkwaliteit
-            </span>
-        </div>
-        <div class="week-content">
-            <h3 class="section-title">Tijdens Werkplekleren 1 heb ik vooral mijn zelfstandigheid, doorzettingsvermogen en probleemoplossend denken kunnen toepassen.
-
-                In de toekomst kan ik nog meer inzetten op communicatie en time-management, zodat ik efficiënter werk en sneller vooruitgang boek.</h3>
-
-        </div>
+<nav class="subnav" aria-label="Leertraject navigatie">
+    <div class="container">
+        <a href="Logboek.html" class="subnav-link"><span class="subnav-icon">📅</span> Logboek</a>
+        <a href="Ontwikkeling.html" class="subnav-link"><span class="subnav-icon">👤</span> Ontwikkeling</a>
+        <a href="Opdrachten.html" class="subnav-link"><span class="subnav-icon">📝</span> Opdrachten</a>
+        <a href="Reflectie.html" class="subnav-link active"><span class="subnav-icon">💭</span> Reflectie</a>
+        <a href="documentatie.html" class="subnav-link"><span class="subnav-icon">📚</span> Documentatie</a>
     </div>
+</nav>
 
+<main id="main-content">
+<section class="page-hero-section">
+    <div class="hero-bg" aria-hidden="true">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+    <div class="page-hero-inner container">
+        <h1 class="page-hero-title">Reflectie</h1>
+        <p class="page-hero-sub">AIM-reflectie, kernkwadranten en X-factor</p>
+    </div>
+</section>
+    <section class="container section-pad">
 
+        <table class="reflectie">
+            <thead>
+            <tr>
+                <th style="width:80px;">Onderdeel</th>
+                <th>Antwoord</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <img src="Images/positief.png" alt="Positief" style="height:60px; vertical-align:middle;">
+                </td>
+                <td>
+                    <h2 class="section-title" style="margin-top:0;">Wat vond je een bijzonder positief element van Werkplekleren 1?</h2>
+                    <p class="card-text">Het meest positieve aspect van Werkplekleren 1 was voor mij de praktijkgerichte aanpak. In tegenstelling tot puur theoretisch onderwijs werkte ik hier aan echte, afgebakende projecten met een concreet resultaat. Ik bouwde een volledig werkend ballonspel in Scratch, schreef een C#-consoleapplicatie, maakte een WPF-toepassing, werkte met SQL voor databanken, leerde versiebeheer via Git en GitHub, en bouwde dit portfolio volledig zelf in HTML en CSS. Elk project leverde iets tastbaars op dat ik kon tonen en demonstreren.</p>
+                    <p class="card-text">Bijzonder waardevol waren ook de feedbackmomenten: na het indienen van de C#-consoleapplicatie en de debugging-opdracht kreeg ik gerichte opmerkingen die mij hielpen om mijn code te verbeteren. Die iteratieve cyclus van bouwen, feedback ontvangen en verbeteren is precies hoe professionele softwareontwikkeling werkt. De afwisseling van technologieën, van visueel programmeren in Scratch tot objectgeoriënteerd programmeren in C#, hield het leerproces boeiend en toonde mij hoe breed het vakgebied is.</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="Images/minder_leuk.png" alt="Minder leuk" style="height:60px; vertical-align:middle;">
+                </td>
+                <td>
+                    <h2 class="section-title" style="margin-top:0;">Wat vond je een minder leuk element van Werkplekleren 1?</h2>
+                    <p class="card-text">Als ik eerlijk ben, was Werkplekleren 1 voor mij overwegend positief. Toch waren er momenten die ik als minder gemakkelijk heb ervaren. Soms waren de verwachtingen bij bepaalde opdrachten niet onmiddellijk duidelijk voor mij, waardoor ik extra tijd nodig had om de juiste richting te vinden. Dat leidde tot momenten van frustratie, zeker wanneer ik merkte dat mijn aanpak niet overeenkwam met wat bedoeld was.</p>
+                    <p class="card-text">Een ander punt was het grotendeels individuele karakter van de leerervaring. Hoewel ik het fijn vind om zelfstandig te werken, miste ik soms de dynamiek van samen een probleem aanpakken. In een professionele IT-omgeving werk je bijna altijd in team, dus meer gesimuleerde samenwerkingsopdrachten zouden mij nog beter hebben voorbereid op de werkelijkheid. Ik nam dit als aanleiding om mijn communicatievaardigheden en het tijdig vragen van hulp als concrete werkpunten te formuleren.</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="Images/inzichten.png" alt="Inzichten" style="height:60px; vertical-align:middle;">
+                </td>
+                <td>
+                    <h2 class="section-title" style="margin-top:0;">Welke nieuwe inzichten neem je mee uit Werkplekleren 1?</h2>
+                    <p class="card-text">Werkplekleren 1 heeft mij drie fundamentele inzichten gegeven. Ten eerste: het verschil tussen theorie begrijpen en iets effectief implementeren is groot. Een concept kunnen uitleggen is iets anders dan het correct en efficiënt coderen in een echte toepassing. Dit inzicht heeft mij bescheidener gemaakt over wat ik "ken" versus wat ik effectief kan toepassen.</p>
+                    <p class="card-text">Ten tweede leerde ik dat fouten maken essentieel is in het leerproces. Elke fout die ik oploste, leerde mij iets wat ik niet had geleerd door simpelweg correcte code te lezen. De debugging-opdracht was hierin het meest leerzaam: door fouten van anderen te analyseren, begreep ik mijn eigen codegewoonten beter.</p>
+                    <p class="card-text">Ten derde besefte ik hoe belangrijk planning en structuur zijn. Bij projecten waar ik vooraf een duidelijke aanpak had, werkte ik efficiënter en met minder stress dan wanneer ik direct begon te coderen. Dit inzicht neem ik mee naar Werkplekleren 2: eerst plannen, dan bouwen.</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="Images/succes.png" alt="Succes" style="height:60px; vertical-align:middle;">
+                </td>
+                <td>
+                    <h2 class="section-title" style="margin-top:0;">Wat zou je een persoonlijk succes noemen tijdens Werkplekleren 1? Waarop ben je trots?</h2>
+                    <p class="card-text">Mijn grootste persoonlijke succes is de opbouw van dit portfolio. Ik heb het volledig zelf ontworpen en geprogrammeerd in HTML en CSS, zonder gebruik te maken van templates, frameworks of JavaScript-bibliotheken. Van het eerste idee tot het eindresultaat (met sticky navigatiebalk, kaartensysteem, hover-effecten en responsive lay-out) heb ik alles zelf gerealiseerd. Dat ik iets heb neergezet dat professioneel oogt én volledig door mij gebouwd is, geeft mij een grote voldoening.</p>
+                    <p class="card-text">Een tweede succes is mijn Scratch-ballonspel. Ik heb niet alleen de basisopdracht voltooid, maar heb bewust extra features toegevoegd: meerdere levels met toenemende moeilijkheid en een puntensysteem dat de voortgang bijhoudt. Dat initiatief nemen en verder gaan dan wat gevraagd werd, is iets waarop ik trots ben. Het laat zien dat ik niet alleen opdrachten uitvoer, maar ook nadenk over hoe iets beter of uitgebreider kan. Dat is voor mij de kern van wat een goede programmeur onderscheidt.</p>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <h2 class="title-between">Kernkwadranten</h2>
+        <p class="card-text" style="margin-bottom:1.5rem;">De kernkwadrantentheorie van Daniel Ofman beschrijft hoe een kernkwaliteit, wanneer overdreven, een valkuil wordt. De tegenpool van je kernkwaliteit is je allergie, en het middengebied is je uitdaging: de positieve tegenhanger van je valkuil.</p>
 
         <div class="card">
             <div class="week-header">
-            <span class="week-badge">
-                Valkuil
-            </span>
-            </div>
-                <div class="week-content">
-                    <h3 class="section-title">Mijn belangrijkste valkuilen zijn dat ik soms te lang blijf zoeken naar een oplossing en te weinig hulp vraag. Daarnaast is mijn planning niet altijd optimaal, waardoor taken soms meer tijd innemen dan nodig. Dit komt vooral doordat ik alles graag zelf wil oplossen en nog moet leren beter prioriteiten te stellen.
-                    </h3>
-
-                </div>
-            </div>
-
-
-
-        <div class="card">
-            <div class="week-header">
-            <span class="week-badge">
-                Allergie
-            </span>
+                <span class="week-badge">Kernkwaliteit</span>
             </div>
             <div class="week-content">
-                <h3 class="section-title">Complexe problemen kosten mij soms extra tijd om volledig te doorgronden. Vooral wanneer meerdere onderdelen tegelijk samenkomen, moet ik gestructureerd blijven zoeken naar de juiste oplossing.
-
-                    Daarnaast is debuggen niet mijn sterkste of favoriete onderdeel van programmeren. Hoewel ik fouten kan opsporen en oplossen, wil ik hierin sneller en efficiënter worden.</h3>
+                <p class="card-text">Mijn kernkwaliteit is zelfstandigheid gecombineerd met doorzettingsvermogen en probleemoplossend denken. Als ik een probleem tegenkom, analyseer ik het systematisch en zoek ik net zo lang totdat ik de oplossing heb gevonden. Ik wacht niet op anderen om het voor mij op te lossen: ik neem initiatief en ga zelf aan de slag.</p>
+                <p class="card-text">Dit heeft zich tijdens Werkplekleren 1 meerdere keren getoond. Bij de debugging-opdracht in C# moest ik fouten opsporen in code die ik zelf niet had geschreven. In plaats van op te geven of onmiddellijk hulp te vragen, heb ik systematisch de code doorlopen, breakpoints gezet in Visual Studio en elke variabele gecontroleerd totdat ik de oorzaak vond. Bij mijn Scratch-ballonspel bleef ik itereren aan de botsingsdetectie: opnieuw testen, aanpassen, opnieuw testen, totdat het vlekkeloos werkte. Datzelfde doorzettingsvermogen toonde ik bij het bouwen van dit portfolio: telkens als een CSS-probleem of lay-outkwestie optrad, zocht ik de oorzaak en loste ik het op in plaats van er omheen te werken.</p>
             </div>
         </div>
+
         <div class="card">
-
-        <div class="week-header">
-            <span class="week-badge">
-                Uitdaging
-            </span>
-        </div>
-        <div class="week-content">
-            <h3 class="section-title">Mijn verbeterpunten en uitdagingen liggen vooral bij planning, communicatie en het tijdig vragen om hulp. Concreet kan ik dit aanpakken door mijn taken beter op te splitsen, duidelijke deadlines voor mezelf te zetten en sneller vragen te stellen wanneer iets onduidelijk is.
-
-                Hulp die welkom zou zijn, is regelmatige feedback en extra toelichting bij opdrachten. Aan mijn lectoren of werkplekcoach kan ik vragen om duidelijkere verwachtingen, bevestiging of ik op de juiste weg zit en tips om efficiënter te werken.
-
-            </h3>
-
-        </div>
+            <div class="week-header">
+                <span class="week-badge">Valkuil</span>
+            </div>
+            <div class="week-content">
+                <p class="card-text">Mijn valkuil is dat mijn kernkwaliteiten, zelfstandigheid en doorzettingsvermogen, kunnen doorslaan naar koppigheid en te lang alleen zoeken. Ik besteed soms te veel tijd aan het zelf oplossen van een probleem, terwijl sneller hulp vragen efficiënter zou zijn. Dit is tegelijk een verspilling van tijd én een gemiste kans om van anderen te leren.</p>
+                <p class="card-text">Een concreet voorbeeld: tijdens de debugging-opdracht verloor ik bijna een uur aan het zoeken naar een fout die verband hield met een concept dat ik nog niet goed begreep. Een korte vraag aan een docent had me dit kunnen besparen. Ik stel hulp vragen soms te lang uit, omdat ik het gevoel heb dat ik het "zelf zou moeten kunnen". Dat is een belemmering voor mijn efficiëntie en groei.</p>
+                <p class="card-text">Mijn valkuil is ook zichtbaar in mijn planning: ik onderschat soms hoe lang een opdracht duurt, omdat ik vertrouw op mijn doorzettingsvermogen om het "toch wel opgelost te krijgen". Hierdoor kom ik soms krap te zitten met tijd, wat stress veroorzaakt. Beter leren inschatten én op tijd stoppen met zelf zoeken zijn mijn concrete werkpunten.</p>
+            </div>
         </div>
 
+        <div class="card">
+            <div class="week-header">
+                <span class="week-badge">Allergie</span>
+            </div>
+            <div class="week-content">
+                <p class="card-text">Mijn allergie is onoverzichtelijkheid en gebrek aan structuur, zowel in code als in processen. Wanneer ik te maken krijg met code die slecht gestructureerd is (onlogische variabelenamen, vermenging van verantwoordelijkheden, geen duidelijke indeling) kost het mij extra energie en concentratie om het te begrijpen en te verbeteren. Ik raak snel geïrriteerd door code die moeilijk te lezen is, omdat ik zelf veel waarde hecht aan leesbaarheid en structuur.</p>
+                <p class="card-text">Hetzelfde geldt voor onduidelijke instructies of processen: als ik niet weet wat er precies van mij verwacht wordt, of als een workflow inconsistent is, word ik onrustig. Bij de debugging-opdracht werkte ik het prettigst wanneer de foutomschrijvingen concreet waren en ik een duidelijk startpunt had. Vage beschrijvingen van problemen zoals "het werkt niet" zonder verdere context maken het voor mij moeilijker om efficiënt te werken.</p>
+                <p class="card-text">Mijn allergie voor onoverzichtelijkheid is tegelijk een spiegel van mijn uitdaging: leren omgaan met ambiguïteit en chaos. In de praktijk zal ik niet altijd perfecte, gestructureerde situaties tegenkomen. Dat is precies waar ik wil groeien.</p>
+            </div>
+        </div>
 
-        <h3 class="title-between">X-factor
-        </h3>
+        <div class="card">
+            <div class="week-header">
+                <span class="week-badge">Uitdaging</span>
+            </div>
+            <div class="week-content">
+                <p class="card-text">Mijn uitdaging is communicatie: het tijdig rapporteren van mijn voortgang, eerder hulp vragen wanneer ik vastloopt, en transparant zijn over de status van mijn werk, ook wanneer er nog geen probleem is. In een professionele IT-context is dit een fundamentele vaardigheid: teamleden en leidinggevenden verwachten regelmatige statusupdates, niet alleen wanneer er iets fout gaat.</p>
+                <p class="card-text">Concreet plan ik dit aan te pakken door dagelijks een korte planning te maken, taken op te splitsen in kleinere stappen met tussentijdse checkpoints, en sneller "ik zit vast" te zeggen in plaats van uren zelf te blijven zoeken. Ik wil dat vragen om hulp niet aanvoelt als een tekortkoming, maar als een teken van zelfbewustzijn en professionele attitude.</p>
+                <p class="card-text">Mijn tweede uitdaging is time-management: realistischer inschatten hoe lang een taak duurt, zodat ik minder vaak in tijdnood kom. Ik wil ook leren om te stoppen met perfectionisme dat mij vertraagt: soms is een goed werkende oplossing beter dan een perfecte die te veel tijd kost. De balans vinden tussen kwaliteit en efficiëntie is een vaardigheid die ik in Werkplekleren 2 actief wil oefenen.</p>
+            </div>
+        </div>
+
+        <h2 class="title-between">X-factor</h2>
 
         <div class="scratch-card">
             <div class="scratch-card__left">
@@ -141,28 +163,28 @@
                     <span class="week-badge">X-factor</span>
                 </div>
                 <div class="scratch-card__content">
-                    <h3 class="section-title">(em)passie)</h3>
-                    <p class="card-text">Ik ben met volle goesting aan mijn eerste programmeerproject begonnen: het Scratch-ballonspel. Ondanks dat het nieuw en uitdagend was, heb ik extra features toegevoegd zoals levels en een puntensysteem. Dat toont mijn motivatie om verder te gaan dan de basis. Ook bij het reflecteren op mijn werk (Scratch, debugging, C#) heb ik geleerd om eerlijk naar mezelf te kijken en mijn groei te erkennen. Mijn CV in HTML/CSS heb ik met zorg opgebouwd, omdat ik trots ben op mijn ontwikkeling.</p>
-                    <h3 class="section-title">Ondernemend & innovatief</h3>
-                    <p class="card-text">Ik heb Git en GitHub leren gebruiken om mijn projecten te versioneren en online te delen. Dat was nieuw voor mij, maar ik heb het me eigen gemaakt. Bij het bouwen van een consoleapplicatie in C# en een webpagina in HTML/CSS heb ik creatief nagedacht over structuur en stijl. Ik experimenteerde met methodes, herhalingen en styling om mijn projecten functioneel én aantrekkelijk te maken. Ook mijn Scratch-uitbreidingen tonen dat ik initiatief neem.</p>
-                    <h3 class="section-title">(internationaal samen(net)werking</h3>
-                    <p class="card-text">Via GitHub heb ik geleerd hoe samenwerking in de praktijk verloopt. De gastsprekers gaven me inzicht in het echte leven van een programmeur, wat me hielp om mijn eigen leerpad beter te begrijpen. Bij het Carrièrekompas analyseerde ik een vacature en koppelde die aan mijn eigen competenties. Feedbackmomenten waren ook belangrijk: ik paste de opmerkingen van docenten toe om mijn projecten te verbeteren.</p>
-                    <h3 class="section-title">Multi- & disciplinair samenwerken</h3>
-                    <p class="card-text">Ik heb gewerkt met verschillende technologieën: Scratch, C#, HTML, CSS, Git, Visual Studio. Dat toont hoe ik verschillende disciplines combineer. Bij debugging gebruikte ik tools zoals breakpoints om fouten op te sporen. Mijn reflecties en planning tonen dat ik ook soft skills ontwikkel zoals time management en zelfanalyse. De SDG-opdracht liet me nadenken over maatschappelijke thema’s binnen IT.</p>
-
+                    <h3 class="section-title">(Em)passie</h3>
+                    <p class="card-text">Ik ben met volle goesting aan elk project begonnen: van mijn eerste Scratch-ballonspel tot dit portfolio. Ik voegde extra features toe aan mijn Scratch-spel (levels en een puntensysteem) niet omdat het gevraagd werd, maar omdat ik het uitdagend en leuk vond. Datzelfde enthousiasme zie ik in hoe ik dit portfolio heb gebouwd: ik heb het meerdere keren herwerkt totdat het resultaat was zoals ik het voor ogen had. Die intrinsieke motivatie, het willen maken van iets waar ik trots op ben, drijft mij aan als programmeur.</p>
+                    <h3 class="section-title">Ondernemend &amp; innovatief</h3>
+                    <p class="card-text">Ik gebruik Git en GitHub voor al mijn projecten, ook wanneer het niet verplicht is. Ik experimenteerde met CSS-animaties, hover-effecten en een kaartensysteem in mijn portfolio, en zocht actief naar betere manieren om mijn code te structureren. Bij elke opdracht vroeg ik mij af: kan dit beter, uitgebreider of eleganter? Dat initiatief nemen en verder denken dan de minimumvereisten is iets wat mij als beginnend programmeur onderscheidt.</p>
+                    <h3 class="section-title">(Internationaal) samenwerken</h3>
+                    <p class="card-text">Via GitHub leerde ik hoe samenwerking in de IT-praktijk verloopt: code delen, versies bijhouden en de bijdragen van anderen volgen. De gastspreker-sessies gaven mij inzicht in het echte leven van een programmeur en de internationale dimensie van software: open source, Engelstalige documentatie en wereldwijde tools. Bij het Carrièrekompas analyseerde ik vacatures en koppelde ik mijn competenties aan wat werkgevers vragen. Feedbackmomenten leerden mij ook hoe je constructief reageert op kritiek en die omzet in concrete verbeteringen.</p>
+                    <h3 class="section-title">Multi- &amp; disciplinair samenwerken</h3>
+                    <p class="card-text">Ik werkte dit semester met een brede waaier aan technologieën: Scratch, C#, HTML, CSS, SQL, Git en Visual Studio. Dat toont hoe ik verschillende disciplines combineer en snel schakel tussen omgevingen. Bij debugging gebruikte ik tools als breakpoints en de call stack, wat aantoont dat ik gereedschappen strategisch inzet. Mijn reflecties en planning tonen ook de ontwikkeling van mijn soft skills: time management, zelfanalyse en communicatie. De SDG-opdracht liet mij nadenken over de maatschappelijke verantwoordelijkheid van technologen.</p>
                 </div>
             </div>
             <div class="scratch-card__gif">
-                <img src="Images/x-factor.jpg" alt="Scratch game">
+                <img src="Images/x-factor.jpg" alt="X-factor illustratie">
             </div>
         </div>
 
     </section>
-
 </main>
 
 <footer>
-    <p>&copy; 2025 Tristan Pilat - Graduaat Programmeren</p>
+    <p>&copy; 2026 Tristan Pilat — Graduaat Programmeren · Hogeschool PXL</p>
 </footer>
+<script src="js/nav.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

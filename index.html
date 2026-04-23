@@ -6,64 +6,294 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Portfolio Tristan Pilat</title>
 </head>
-<body>
+<body class="is-loading">
+
+<div id="loader" role="status" aria-label="Pagina laden">
+    <div class="loader-inner">
+        <p class="loader-logo">Tristan Pilat</p>
+        <div class="loader-bar"><div class="loader-fill"></div></div>
+    </div>
+</div>
+
+<a href="#main-content" class="skip-link">Ga naar inhoud</a>
 <header>
-    <nav>
-        <div class="logo">Tristan Pilat</div>
-        <ul class="nav-links">
-            <li><a href="index.html" class="active">Introductie</a></li>
-            <li><a href="Logboek.html">Logboek</a></li>
-            <li><a href="Ontwikkeling.html">Ontwikkeling</a></li>
-            <li><a href="Opdrachten.html">Opdrachten</a></li>
-            <li><a href="Reflectie.html">Reflectie</a></li>
+    <nav aria-label="Hoofdnavigatie">
+        <div class="logo"><a href="index.html">Tristan Pilat</a></div>
+        <button class="hamburger" aria-label="Menu openen" aria-expanded="false" aria-controls="nav-menu">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="nav-menu">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="projecten.html">Projecten</a></li>
+            <li><a href="wpl2-case.html">WPL2 Case</a></li>
+            <li class="dropdown">
+                <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                    Leertraject <span class="arrow" aria-hidden="true">▾</span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="Logboek.html"><span class="dd-icon">📅</span><span class="dd-body"><span class="dd-title">Logboek</span><span class="dd-desc">14 weken activiteiten</span></span></a></li>
+                    <li><a href="Ontwikkeling.html"><span class="dd-icon">👤</span><span class="dd-body"><span class="dd-title">Ontwikkeling</span><span class="dd-desc">Vijf rollen &amp; OLR</span></span></a></li>
+                    <li><a href="Opdrachten.html"><span class="dd-icon">📝</span><span class="dd-body"><span class="dd-title">Opdrachten</span><span class="dd-desc">WPL1 &amp; WPL2 opdrachten</span></span></a></li>
+                    <li><a href="Reflectie.html"><span class="dd-icon">💭</span><span class="dd-body"><span class="dd-title">Reflectie</span><span class="dd-desc">AIM &amp; kernkwadranten</span></span></a></li>
+                    <li><a href="documentatie.html"><span class="dd-icon">📚</span><span class="dd-body"><span class="dd-title">Documentatie</span><span class="dd-desc">Alle pagina's &amp; downloads</span></span></a></li>
+                </ul>
+            </li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 </header>
 
-<main>
-    <section id="introductie" class="hero container">
-        <h1 class="hero-title">Portfolio Tristan Pilat</h1>
-        <p class="hero-description">Graduaat Programmeren</p>
+<main id="main-content">
 
-        <div class="card card-border">
-            <h2 class="card-title primary">Introductie</h2>
-            <p class="card-text">
-                Mijn naam is Tristan Pilat en ik ben student Graduaat Programmeren aan Hogeschool PXL. Ik heb een sterke interesse in technologie en softwareontwikkeling en wil mij verder ontwikkelen als programmeur. Tijdens mijn opleiding leer ik werken met verschillende programmeertalen en tools. Ik vind het belangrijk om mijn kennis niet alleen theoretisch, maar ook praktisch toe te passen.
-
-                In dit portfolio toon ik mijn leerproces, projecten en opdrachten die ik heb uitgevoerd tijdens Werkplekleren 1. Daarnaast reflecteer ik over mijn groei, mijn sterktes en de punten waaraan ik nog wil werken. Het portfolio geeft een duidelijk beeld van mijn evolutie als beginnend programmeur. Dit document dient zowel voor mezelf als voor mijn coaches om mijn vooruitgang op te volgen. Ik ben gemotiveerd om te blijven bijleren en mijn vaardigheden verder te verbeteren.            </p>
+    <!-- ── Hero ───────────────────────────── -->
+    <section class="hero-section" aria-label="Introductie">
+        <div class="hero-bg" aria-hidden="true">
+            <canvas id="particles-canvas"></canvas>
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+            <div class="blob blob-3"></div>
         </div>
+        <div class="hero-inner container">
+            <p class="hero-eyebrow">👋 Hallo, ik ben</p>
+            <h1 class="hero-name">Tristan <span class="text-gradient">Pilat</span></h1>
+            <p class="hero-typing">
+                <span class="typing-prefix">Ik ben een</span>
+                <span id="typing-text"></span><span class="typing-cursor" aria-hidden="true"></span>
+            </p>
+            <p class="hero-sub">
+                Graduaat Programmeren · Hogeschool PXL · Hasselt<br>
+                Ik bouw software: van logica tot lay-out, van concept tot werkend resultaat.
+                Programmeren is voor mij niet enkel een studie, maar een manier van denken.
+            </p>
+            <div class="hero-cta">
+                <a href="projecten.html" class="btn btn-gradient">Bekijk mijn projecten →</a>
+                <a href="#over-mij" class="btn btn-ghost">Over mij ↓</a>
+            </div>
+            <div class="hero-stack" aria-label="Tech stack">
+                <span class="hero-stack-label">Stack:</span>
+                <img src="Images/HTML5_logo_and_wordmark.svg.png" alt="HTML5" class="stack-logo" title="HTML5">
+                <img src="Images/CSS3_logo_and_wordmark.svg.png" alt="CSS3" class="stack-logo" title="CSS3">
+                <span class="stack-badge" title="JavaScript">JS</span>
+                <span class="stack-badge" title="Vue.js">Vue</span>
+                <img src="Images/Logo_C_sharp.svg.png" alt="C#" class="stack-logo" title="C#">
+                <img src="Images/net2.png" alt=".NET" class="stack-logo" title=".NET">
+                <img src="Images/Git_icon.svg.png" alt="Git" class="stack-logo" title="Git">
+                <img src="Images/Sql_data_base_with_logo.png" alt="SQL" class="stack-logo" title="SQL">
+            </div>
+            <a href="#over-mij" class="scroll-hint" aria-label="Scroll naar inhoud">
+                <span>Scroll</span>
+                <div class="scroll-mouse" aria-hidden="true"></div>
+            </a>
+        </div>
+    </section>
 
-        <div class="card-container">
-            <div class="card">
-                <div class="card-image">💻</div>
-                <h3 class="card-skill">Skills</h3>
-                <div class="skills-logos">
-                    <img src="Images/HTML5_logo_and_wordmark.svg.png" alt="HTML5" class="skill-logo">
-                    <img src="Images/CSS3_logo_and_wordmark.svg.png" alt="CSS3" class="skill-logo">
-                    <img src="Images/Logo_C_sharp.svg.png" alt="JavaScript" class="skill-logo">
-                    <img src="Images/net2.png" alt="Git" class="skill-logo">
-                    <img src="Images/Git_icon.svg.png" alt="Git" class="skill-logo">
-                    <img src="Images/Sql_data_base_with_logo.png" alt="Git" class="skill-logo">
-
-
+    <!-- ── Stats ─────────────────────────── -->
+    <section class="stats-section" aria-label="Statistieken">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number" data-count="14" data-suffix="">0</span>
+                    <span class="stat-label">Weken WPL</span>
                 </div>
-            </div>
-            <div class="card">
-                <div class="card-image">🎓</div>
-                <h3 class="card-skill">Hogeschool PXL</h3>
-                <p class="card-description">Student Graduaat Programmeren</p>
-            </div>
-            <div class="card">
-                <div class="card-image">📝</div>
-                <h3 class="card-skill">Werkplekleren 1</h3>
-                <p class="card-description">Ontwikkeling & Reflectie</p>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="6" data-suffix="+">0</span>
+                    <span class="stat-label">Opdrachten</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="5" data-suffix="">0</span>
+                    <span class="stat-label">Rollen</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="8" data-suffix="+">0</span>
+                    <span class="stat-label">Talen &amp; tools</span>
+                </div>
             </div>
         </div>
     </section>
+
+    <!-- ── Over mij ───────────────────────── -->
+    <section id="over-mij" class="container section-pad">
+        <div class="section-header">
+            <h2 class="section-title-big">Over mij</h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="about-layout">
+            <div class="about-avatar-col">
+                <div class="profile-avatar" aria-hidden="true">
+                    <span>TP</span>
+                </div>
+                <div class="about-meta">
+                    <div class="about-meta-item">
+                        <span class="about-meta-label">Opleiding</span>
+                        <span class="about-meta-value">Graduaat Programmeren</span>
+                    </div>
+                    <div class="about-meta-item">
+                        <span class="about-meta-label">School</span>
+                        <span class="about-meta-value">Hogeschool PXL, Hasselt</span>
+                    </div>
+                    <div class="about-meta-item">
+                        <span class="about-meta-label">Status</span>
+                        <span class="about-meta-value">WPL2 in uitvoering</span>
+                    </div>
+                    <div class="about-meta-item">
+                        <span class="about-meta-label">Ambitie</span>
+                        <span class="about-meta-value">Stage · WPL3 &amp; WPL4</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-text-col">
+                <p class="card-text">
+                    Mijn naam is Tristan Pilat en ik ben student Graduaat Programmeren aan Hogeschool PXL in Hasselt. Technologie heeft mij altijd geboeid: ik ben opgegroeid met computers en digitale systemen, en al vroeg merkte ik dat ik niet alleen wilde gebruiken wat anderen hadden gebouwd. Ik wilde het zelf maken.
+                </p>
+                <p class="card-text">
+                    Programmeren trekt mij aan omdat het een unieke combinatie is van logisch nadenken, creativiteit en het tastbaar zien van resultaten. Als een programma uiteindelijk correct werkt na urenlang zoeken en debuggen, geeft dat een enorme voldoening. Tijdens Werkplekleren 1 heb ik mij verdiept in meerdere programmeertalen en tools: ik bouwde consoleapplicaties en WPF-toepassingen in C#, maakte SQL-query's voor databanken, beheerde mijn code via Git en GitHub, en bouwde dit portfolio volledig zelf in HTML en CSS, zonder template of framework.
+                </p>
+                <p class="card-text">
+                    Ik leer het liefst door zelf te experimenteren. Als iets mislukt, zoek ik hardnekkig naar de oorzaak totdat het werkt. Dat doorzettingsvermogen heeft mij geholpen bij uitdagende opdrachten: extra levels toevoegen aan mijn Scratch-ballonspel, complexe C#-code debuggen via breakpoints, of een volledig responsive website zelf ontwerpen. Dit portfolio is een eerlijk beeld van wat ik al beheers en wat ik nog wil ontwikkelen.
+                </p>
+                <div class="about-contact-row">
+                    <a href="mailto:tristan.pilat@student.pxl.be" class="about-contact-chip">✉️ tristan.pilat@student.pxl.be</a>
+                    <a href="https://linkedin.com/in/tristanpilat" target="_blank" rel="noopener noreferrer" class="about-contact-chip">💼 LinkedIn</a>
+                    <a href="https://github.com/TristanPilatPXL" target="_blank" rel="noopener noreferrer" class="about-contact-chip">🐱 GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Vrije sectie ────────────────────── -->
+    <section id="vrijsectie" class="container section-pad" style="padding-bottom:20px;">
+        <div class="section-header">
+            <h2 class="section-title-big">Buiten het scherm</h2>
+            <div class="section-divider"></div>
+        </div>
+        <p class="card-text" style="margin-bottom:24px;max-width:620px;">
+            Programmeren is mijn studie, maar ik ben meer dan mijn code. Hier een kijkje in wie ik ben buiten de terminal.
+        </p>
+
+        <div class="hobby-grid">
+            <div class="hobby-card">
+                <span class="hobby-emoji">🎮</span>
+                <h3>Gaming &amp; Game Logic</h3>
+                <p>Games spelen leerde mij hoe systemen en regels samenwerken. Bij mijn Scratch-project merkte ik dat mijn gamingintuïtie (levens, scores, levels) direct vertaalde naar programmeerlogica. Games zijn interactieve systemen, en dat fascineert mij als programmeur.</p>
+            </div>
+            <div class="hobby-card">
+                <span class="hobby-emoji">🔧</span>
+                <h3>Dingen uit elkaar halen</h3>
+                <p>Van jongs af aan wilde ik begrijpen hoe dingen werken. Computers, elektronica, software: mijn nieuwsgierigheid naar het "hoe en waarom" achter technologie is de motor van mijn leerproces. Dat is ook waarom ik liever iets zelf bouw dan een kant-en-klare oplossing gebruik.</p>
+            </div>
+            <div class="hobby-card">
+                <span class="hobby-emoji">📚</span>
+                <h3>Zelfstandig bijleren</h3>
+                <p>Naast de lessen volg ik tutorials, lees ik documentatie en experimenteer ik met code buiten de opdrachten om. WPF leerde ik grotendeels zelf via YouTube en officiële docs. Die gewoonte om proactief bij te leren beschouw ik als een van mijn sterkste troeven.</p>
+            </div>
+            <div class="hobby-card">
+                <span class="hobby-emoji">🧩</span>
+                <h3>Logische puzzels</h3>
+                <p>Ik hou van problemen die een systematische aanpak vereisen. Of het nu gaat om een schaakprobleem, een logicapuzzel of een debugging-sessie: het zoeken naar de elegante oplossing geeft mij een kick. Dat analytisch denken zit verweven in alles wat ik doe.</p>
+            </div>
+            <div class="hobby-card">
+                <span class="hobby-emoji">🌍</span>
+                <h3>Technologie &amp; maatschappij</h3>
+                <p>De SDG-opdracht leerde mij nadenken over de maatschappelijke impact van IT. Technologie is nooit neutraal. Het kan oplossingen bieden voor grote problemen, maar ook nieuwe problemen creëren. Die bewustwording vind ik steeds belangrijker als toekomstig IT-professional.</p>
+            </div>
+            <div class="hobby-card">
+                <span class="hobby-emoji">🎯</span>
+                <h3>Doelen stellen &amp; halen</h3>
+                <p>Ik werk graag naar concrete resultaten toe. Of dat nu een werkende applicatie is, een nieuw concept dat ik beheers, of een opdracht die ik beter maak dan de minimumvereisten. Het gevoel van een afgewerkt, goed resultaat drijft mij aan om door te gaan.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Navigatie overzicht ───────────────── -->
+    <section class="quicknav-section" aria-label="Portfolio navigatie">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title-big">Alle pagina's in één oogopslag</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="quicknav-grid">
+                <a href="projecten.html" class="quicknav-card">
+                    <span class="quicknav-icon">🚀</span>
+                    <span class="quicknav-title">Projecten</span>
+                    <span class="quicknav-desc">Portfolio, C#, WPF, Vue.js, Scratch en meer (6 projecten)</span>
+                </a>
+                <a href="wpl2-case.html" class="quicknav-card">
+                    <span class="quicknav-icon">💼</span>
+                    <span class="quicknav-title">WPL2 Case</span>
+                    <span class="quicknav-desc">Pop &amp; Clay, full-stack teamproject voor een echte opdrachtgever</span>
+                </a>
+                <a href="Logboek.html" class="quicknav-card">
+                    <span class="quicknav-icon">📅</span>
+                    <span class="quicknav-title">Logboek</span>
+                    <span class="quicknav-desc">14 weken activiteiten, evaluaties en opdrachten</span>
+                </a>
+                <a href="Ontwikkeling.html" class="quicknav-card">
+                    <span class="quicknav-icon">👤</span>
+                    <span class="quicknav-title">Ontwikkeling</span>
+                    <span class="quicknav-desc">Vijf rollen van een programmeur &amp; OLR-voorbeelden</span>
+                </a>
+                <a href="Opdrachten.html" class="quicknav-card">
+                    <span class="quicknav-icon">📝</span>
+                    <span class="quicknav-title">Opdrachten</span>
+                    <span class="quicknav-desc">WPL1 &amp; WPL2 opdrachten en deliverables</span>
+                </a>
+                <a href="Reflectie.html" class="quicknav-card">
+                    <span class="quicknav-icon">💭</span>
+                    <span class="quicknav-title">Reflectie</span>
+                    <span class="quicknav-desc">AIM-reflectie, kernkwadranten en X-factor</span>
+                </a>
+                <a href="documentatie.html" class="quicknav-card">
+                    <span class="quicknav-icon">📚</span>
+                    <span class="quicknav-title">Documentatie</span>
+                    <span class="quicknav-desc">Alle pagina's, links en downloads op één plaats</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Contact ─────────────────────────── -->
+    <section id="contact" class="contact-section" aria-label="Contact">
+        <div class="container section-pad">
+            <div class="section-header">
+                <h2 class="section-title-big">Contact</h2>
+                <div class="section-divider"></div>
+            </div>
+            <p class="card-text" style="max-width:520px;">
+                Geïnteresseerd in mijn profiel of wil je meer weten over mijn projecten? Neem gerust contact op, ik reageer graag.
+            </p>
+            <div class="contact-grid">
+                <a href="mailto:tristan.pilat@student.pxl.be" class="contact-item">
+                    <span class="contact-icon" aria-hidden="true">✉️</span>
+                    <div>
+                        <div class="contact-label">E-mail (PXL)</div>
+                        <div class="contact-value">tristan.pilat@student.pxl.be</div>
+                    </div>
+                </a>
+                <a href="https://linkedin.com/in/tristanpilat" target="_blank" rel="noopener noreferrer" class="contact-item">
+                    <span class="contact-icon" aria-hidden="true">💼</span>
+                    <div>
+                        <div class="contact-label">LinkedIn</div>
+                        <div class="contact-value">linkedin.com/in/tristanpilat</div>
+                    </div>
+                </a>
+                <a href="https://github.com/TristanPilatPXL" target="_blank" rel="noopener noreferrer" class="contact-item">
+                    <span class="contact-icon" aria-hidden="true">🐱</span>
+                    <div>
+                        <div class="contact-label">GitHub</div>
+                        <div class="contact-value">github.com/TristanPilatPXL</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
 </main>
 
 <footer>
-    <p>&copy; 2025 Tristan Pilat - Graduaat Programmeren</p>
+    <p>&copy; 2026 Tristan Pilat — Graduaat Programmeren · Hogeschool PXL</p>
 </footer>
+<script src="js/nav.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
