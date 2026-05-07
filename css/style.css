@@ -24,7 +24,7 @@
     --nav-height: 68px;
 }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 ::selection { background: rgba(249,115,22,0.35); color: #fff; }
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -58,6 +58,10 @@ body {
 @keyframes fade-up {
     from { opacity: 0; transform: translateY(24px); }
     to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes dropdown-fade {
+    from { opacity: 0; transform: translateX(-50%) translateY(12px); }
+    to   { opacity: 1; transform: translateX(-50%) translateY(0); }
 }
 @keyframes pulse-glow {
     0%, 100% { box-shadow: 0 0 0 0 rgba(249,115,22,0.4); }
@@ -144,9 +148,9 @@ nav {
     border-radius: var(--radius);
     box-shadow: 0 16px 48px rgba(0,0,0,0.4);
     list-style: none; padding: 6px 0;
-    min-width: 260px; z-index: 200;
+    min-width: 160px; z-index: 200;
 }
-.dropdown.open .dropdown-menu { display: block; animation: fade-up 0.2s ease both; }
+.dropdown.open .dropdown-menu { display: block; animation: dropdown-fade 0.2s ease both; }
 .dropdown-menu li a {
     display: flex; align-items: center; gap: 13px;
     padding: 11px 18px;
@@ -166,11 +170,7 @@ nav {
     white-space: nowrap;
     transition: color var(--transition);
 }
-.dd-desc {
-    font-size: 11px; color: rgba(255,255,255,0.35);
-    margin-top: 2px; white-space: nowrap;
-    transition: color var(--transition);
-}
+.dd-desc { display: none; }
 .dropdown-menu li a:hover .dd-title { color: white; }
 .dropdown-menu li a:hover .dd-desc { color: rgba(255,255,255,0.55); }
 .dropdown-menu li a.active .dd-title { color: #fed7aa; }
@@ -623,6 +623,22 @@ nav {
 .hobby-emoji { font-size: 2.5rem; margin-bottom: 14px; display: block; }
 .hobby-card h3 { font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
 .hobby-card p { font-size: 14px; color: var(--text-mid); line-height: 1.7; }
+
+/* ── Project Filter ────────────────────────── */
+.filter-bar { display: flex; gap: 8px; flex-wrap: wrap; margin: 28px 0 4px; }
+.filter-btn {
+    padding: 7px 20px; border-radius: 999px;
+    border: 1px solid var(--border);
+    background: transparent; color: var(--text-mid);
+    font-size: 13px; font-weight: 500; font-family: inherit;
+    cursor: pointer; transition: all var(--transition);
+}
+.filter-btn:hover { border-color: var(--primary); color: white; }
+.filter-btn.active { background: var(--gradient); border-color: transparent; color: white; font-weight: 600; }
+.wpl-tag { font-size: 11px; font-weight: 700; padding: 3px 9px; border-radius: 999px; letter-spacing: 0.4px; }
+.wpl-tag-1 { background: rgba(249,115,22,0.18); color: #fb923c; border: 1px solid rgba(249,115,22,0.3); }
+.wpl-tag-2 { background: rgba(139,92,246,0.18); color: #a78bfa; border: 1px solid rgba(139,92,246,0.3); }
+.project-card[hidden], [data-wpl][hidden] { display: none !important; }
 
 /* ── Project kaarten ───────────────────────── */
 .projects-grid {

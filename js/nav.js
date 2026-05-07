@@ -13,8 +13,19 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('.dropdown-toggle').forEach(function (btn) {
         btn.addEventListener('click', function (e) {
             e.stopPropagation();
-            var open = btn.closest('.dropdown').classList.toggle('open');
-            btn.setAttribute('aria-expanded', String(open));
+            var thisDropdown = btn.closest('.dropdown');
+            var isOpen = thisDropdown.classList.contains('open');
+
+            document.querySelectorAll('.dropdown.open').forEach(function (d) {
+                if (d !== thisDropdown) {
+                    d.classList.remove('open');
+                    var b = d.querySelector('.dropdown-toggle');
+                    if (b) b.setAttribute('aria-expanded', 'false');
+                }
+            });
+
+            thisDropdown.classList.toggle('open', !isOpen);
+            btn.setAttribute('aria-expanded', String(!isOpen));
         });
     });
 

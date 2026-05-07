@@ -17,17 +17,26 @@
         <ul class="nav-links" id="nav-menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="projecten.html" class="active">Projecten</a></li>
-            <li><a href="wpl2-case.html">WPL2 Case</a></li>
             <li class="dropdown">
                 <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">
-                    Leertraject <span class="arrow" aria-hidden="true">▾</span>
+                    WPL1 <span class="arrow" aria-hidden="true">▾</span>
                 </button>
                 <ul class="dropdown-menu">
+                    <li><a href="index.html#over-mij"><span class="dd-icon">👋</span><span class="dd-body"><span class="dd-title">Inleiding</span><span class="dd-desc">Persoonlijke introductie</span></span></a></li>
                     <li><a href="Logboek.html"><span class="dd-icon">📅</span><span class="dd-body"><span class="dd-title">Logboek</span><span class="dd-desc">14 weken activiteiten</span></span></a></li>
                     <li><a href="Ontwikkeling.html"><span class="dd-icon">👤</span><span class="dd-body"><span class="dd-title">Ontwikkeling</span><span class="dd-desc">Vijf rollen &amp; OLR</span></span></a></li>
-                    <li><a href="Opdrachten.html"><span class="dd-icon">📝</span><span class="dd-body"><span class="dd-title">Opdrachten</span><span class="dd-desc">WPL1 &amp; WPL2 opdrachten</span></span></a></li>
+                    <li><a href="Opdrachten.html"><span class="dd-icon">📝</span><span class="dd-body"><span class="dd-title">Opdrachten</span><span class="dd-desc">WPL1 opdrachten</span></span></a></li>
                     <li><a href="Reflectie.html"><span class="dd-icon">💭</span><span class="dd-body"><span class="dd-title">Reflectie</span><span class="dd-desc">AIM &amp; kernkwadranten</span></span></a></li>
                     <li><a href="documentatie.html"><span class="dd-icon">📚</span><span class="dd-body"><span class="dd-title">Documentatie</span><span class="dd-desc">Alle pagina's &amp; downloads</span></span></a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                    WPL2 <span class="arrow" aria-hidden="true">▾</span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="wpl2-case.html"><span class="dd-icon">🏺</span><span class="dd-body"><span class="dd-title">Case &amp; Mijn Aandeel</span><span class="dd-desc">Pop &amp; Clay teamproject</span></span></a></li>
+                    <li><a href="wpl2-eindreflectie.pdf" target="_blank"><span class="dd-icon">📄</span><span class="dd-body"><span class="dd-title">Eindreflectie</span><span class="dd-desc">Individuele reflectie (PDF)</span></span></a></li>
                 </ul>
             </li>
             <li><a href="index.html#contact">Contact</a></li>
@@ -49,8 +58,14 @@
     <section class="container section-pad">
         <p class="card-text">Een overzicht van de projecten die ik heb gebouwd tijdens mijn opleiding. Elk project toont een stap in mijn groei als programmeur.</p>
 
+        <div class="filter-bar" role="group" aria-label="Filter op periode">
+            <button class="filter-btn active" data-filter="all">Alles</button>
+            <button class="filter-btn" data-filter="wpl1">WPL1</button>
+            <button class="filter-btn" data-filter="wpl2">WPL2</button>
+        </div>
+
         <!-- Featured WPL2 project -->
-        <div class="case-featured-banner">
+        <div class="case-featured-banner" data-wpl="wpl2">
             <span class="case-featured-label">⭐ WPL2 Teamproject</span>
             <h2 class="case-featured-title">Pop &amp; Clay: Webplatform</h2>
             <p class="case-featured-sub">Full-stack teamproject voor een echte opdrachtgever · Vue.js · C# .NET · SQL · 8 studenten</p>
@@ -60,12 +75,12 @@
         <div class="projects-grid">
 
             <!-- Project 1: Portfolio -->
-            <article class="project-card">
+            <article class="project-card" data-wpl="wpl1">
                 <div class="project-img-placeholder" aria-hidden="true">🌐</div>
-                <!-- geen screenshot beschikbaar -->
                 <div class="project-body">
                     <h2 class="project-title">Portfolio Website</h2>
                     <div class="project-tech" aria-label="Gebruikte technologieën">
+                        <span class="tech-badge wpl-tag wpl-tag-1">WPL1</span>
                         <span class="tech-badge">HTML5</span>
                         <span class="tech-badge">CSS3</span>
                         <span class="tech-badge">JavaScript</span>
@@ -88,7 +103,7 @@
             </article>
 
             <!-- Project 2: C# Console -->
-            <article class="project-card">
+            <article class="project-card" data-wpl="wpl1">
                 <button class="project-img-btn" aria-label="Afbeelding vergroten">
                     <img src="Images/csharp-console.gif" alt="C# console applicatie in actie" class="project-img" loading="lazy">
                     <span class="project-img-zoom" aria-hidden="true">🔍</span>
@@ -96,6 +111,7 @@
                 <div class="project-body">
                     <h2 class="project-title">C# Console Applicatie</h2>
                     <div class="project-tech" aria-label="Gebruikte technologieën">
+                        <span class="tech-badge wpl-tag wpl-tag-1">WPL1</span>
                         <span class="tech-badge">C#</span>
                         <span class="tech-badge">.NET</span>
                         <span class="tech-badge">Visual Studio</span>
@@ -114,7 +130,7 @@
             </article>
 
             <!-- Project 3: C# WPF -->
-            <article class="project-card">
+            <article class="project-card" data-wpl="wpl1">
                 <button class="project-img-btn" aria-label="Afbeelding vergroten">
                     <img src="Images/csharp-wpf.png" alt="C# WPF applicatie schermafbeelding" class="project-img" loading="lazy">
                     <span class="project-img-zoom" aria-hidden="true">🔍</span>
@@ -122,6 +138,7 @@
                 <div class="project-body">
                     <h2 class="project-title">C# WPF Applicatie</h2>
                     <div class="project-tech" aria-label="Gebruikte technologieën">
+                        <span class="tech-badge wpl-tag wpl-tag-1">WPL1</span>
                         <span class="tech-badge">C#</span>
                         <span class="tech-badge">WPF</span>
                         <span class="tech-badge">.NET</span>
@@ -140,7 +157,7 @@
             </article>
 
             <!-- Project 4: Scratch Ballonspel -->
-            <article class="project-card">
+            <article class="project-card" data-wpl="wpl1">
                 <button class="project-img-btn" aria-label="Afbeelding vergroten">
                     <img src="Images/Scratch.gif" alt="Scratch ballonspel animatie" class="project-img" loading="lazy">
                     <span class="project-img-zoom" aria-hidden="true">🔍</span>
@@ -148,6 +165,7 @@
                 <div class="project-body">
                     <h2 class="project-title">Scratch Ballonspel</h2>
                     <div class="project-tech" aria-label="Gebruikte technologieën">
+                        <span class="tech-badge wpl-tag wpl-tag-1">WPL1</span>
                         <span class="tech-badge">Scratch</span>
                         <span class="tech-badge">Game Logic</span>
                         <span class="tech-badge">Visueel Programmeren</span>
@@ -165,7 +183,7 @@
             </article>
 
             <!-- Project 5: Curriculum Vitae -->
-            <article class="project-card">
+            <article class="project-card" data-wpl="wpl1">
                 <button class="project-img-btn" aria-label="Afbeelding vergroten">
                     <img src="Images/Cv.gif" alt="CV project animatie" class="project-img" loading="lazy">
                     <span class="project-img-zoom" aria-hidden="true">🔍</span>
@@ -173,6 +191,7 @@
                 <div class="project-body">
                     <h2 class="project-title">Curriculum Vitae in HTML/CSS</h2>
                     <div class="project-tech" aria-label="Gebruikte technologieën">
+                        <span class="tech-badge wpl-tag wpl-tag-1">WPL1</span>
                         <span class="tech-badge">HTML5</span>
                         <span class="tech-badge">CSS3</span>
                         <span class="tech-badge">Lay-out</span>
@@ -190,7 +209,7 @@
             </article>
 
             <!-- Project 6: HTML & CSS Recreatie -->
-            <article class="project-card">
+            <article class="project-card" data-wpl="wpl1">
                 <button class="project-img-btn" aria-label="Afbeelding vergroten">
                     <img src="Images/html-css.png" alt="HTML CSS project schermafbeelding" class="project-img" loading="lazy">
                     <span class="project-img-zoom" aria-hidden="true">🔍</span>
@@ -198,6 +217,7 @@
                 <div class="project-body">
                     <h2 class="project-title">Webpagina Recreatie</h2>
                     <div class="project-tech" aria-label="Gebruikte technologieën">
+                        <span class="tech-badge wpl-tag wpl-tag-1">WPL1</span>
                         <span class="tech-badge">HTML5</span>
                         <span class="tech-badge">CSS3</span>
                         <span class="tech-badge">Pixel-perfect</span>
@@ -210,6 +230,62 @@
                     </p>
                     <div class="project-learned">
                         <strong>Wat ik leerde:</strong> Interface analyseren en nabootsen, werken met fonts en kleurpaletten, precisie en aandacht voor detail in CSS.
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 7: NUnit -->
+            <article class="project-card" data-wpl="wpl2">
+                <button class="project-img-btn" aria-label="Afbeelding vergroten">
+                    <img src="Images/Nunit.png" alt="NUnit testen schermafbeelding" class="project-img" loading="lazy">
+                    <span class="project-img-zoom" aria-hidden="true">🔍</span>
+                </button>
+                <div class="project-body">
+                    <h2 class="project-title">NUnit Testen</h2>
+                    <div class="project-tech" aria-label="Gebruikte technologieën">
+                        <span class="tech-badge wpl-tag wpl-tag-2">WPL2</span>
+                        <span class="tech-badge">NUnit</span>
+                        <span class="tech-badge">C#</span>
+                        <span class="tech-badge">.NET</span>
+                        <span class="tech-badge">Unit Testing</span>
+                    </div>
+                    <p class="project-desc">
+                        Tijdens WPL2 leerde ik hoe ik NUnit gebruik om geautomatiseerde testen te schrijven voor backend code. Testen hoeven niet complex te zijn: zelfs eenvoudige unit tests helpen om fouten vroeg op te sporen en de kwaliteit van het project te bewaren. Via NUnit schrijf je testmethodes die automatisch controleren of je code het verwachte resultaat teruggeeft.
+                    </p>
+                    <p class="project-desc">
+                        Een concreet voordeel was de snelle feedback: als een collega code aanpast en een test plots faalt, zie je onmiddellijk welke functionaliteit gebroken is. Dat vermijdt regressiefouten in een teamproject. Ik schreef testen voor de backend-logica van ons Pop &amp; Clay-project en leerde zo hoe testdekking het vertrouwen in een codebase verhoogt.
+                    </p>
+                    <div class="project-learned">
+                        <strong>Wat ik leerde:</strong> NUnit teststructuur (Arrange/Act/Assert), unit tests schrijven voor C# methoden, regressiefouten detecteren, kwaliteitsbewaking in teamverband.
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 8: MAUI App -->
+            <article class="project-card" data-wpl="wpl2">
+                <button class="project-img-btn" aria-label="Afbeelding vergroten">
+                    <img src="Images/MAUI_APP_Tristan_Pilat.gif" alt="MAUI Android applicatie demo" class="project-img" loading="lazy">
+                    <span class="project-img-zoom" aria-hidden="true">🔍</span>
+                </button>
+                <div class="project-body">
+                    <h2 class="project-title">C# MAUI Android App</h2>
+                    <div class="project-tech" aria-label="Gebruikte technologieën">
+                        <span class="tech-badge wpl-tag wpl-tag-2">WPL2</span>
+                        <span class="tech-badge">MAUI</span>
+                        <span class="tech-badge">C#</span>
+                        <span class="tech-badge">Android</span>
+                        <span class="tech-badge">DevTunnels</span>
+                        <span class="tech-badge">Swagger</span>
+                        <span class="tech-badge">SQL</span>
+                    </div>
+                    <p class="project-desc">
+                        In dit project verkenden we .NET MAUI om een C#-applicatie te bouwen die draait op Android. We leerden hoe je een Android-emulator opzet om de app te testen zonder fysiek toestel, en hoe je de app verbindt met een backend via een REST API. De app is gekoppeld aan een databank die data ophaalt en wegschrijft.
+                    </p>
+                    <p class="project-desc">
+                        Een belangrijk onderdeel was het gebruik van DevTunnels: daarmee stel je een lokale backend tijdelijk bloot aan het internet zodat de Android-emulator (of een echt toestel) de API kan bereiken. Via Swagger konden we de API-endpoints documenteren en testen tijdens de ontwikkeling. Dit project gaf mij een eerste concrete ervaring met cross-platform mobile development.
+                    </p>
+                    <div class="project-learned">
+                        <strong>Wat ik leerde:</strong> .NET MAUI projectstructuur, Android-emulator opzetten, DevTunnels gebruiken voor lokale API-toegang, Swagger voor API-documentatie, database-integratie in een mobiele app.
                     </div>
                 </div>
             </article>
@@ -234,5 +310,27 @@
 <script src="js/nav.js"></script>
 <script src="js/main.js"></script>
 <script src="js/lightbox.js"></script>
+<script>
+(function () {
+    var btns = document.querySelectorAll('.filter-btn');
+    var cards = document.querySelectorAll('[data-wpl]');
+
+    btns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            btns.forEach(function (b) { b.classList.remove('active'); });
+            btn.classList.add('active');
+
+            var f = btn.dataset.filter;
+            cards.forEach(function (el) {
+                if (f === 'all' || el.dataset.wpl === f) {
+                    el.removeAttribute('hidden');
+                } else {
+                    el.setAttribute('hidden', '');
+                }
+            });
+        });
+    });
+}());
+</script>
 </body>
 </html>
