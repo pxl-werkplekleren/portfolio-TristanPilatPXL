@@ -52,7 +52,7 @@
     </div>
     <div class="page-hero-inner container">
         <h1 class="page-hero-title">WPL2 Case: Pop &amp; Clay</h1>
-        <p class="page-hero-sub">Teamproject · Vue.js · C# .NET · SQL · 8 studenten · echte opdrachtgever</p>
+        <p class="page-hero-sub">Teamproject · HTML / CSS / JS · C# ASP.NET Core · SQL Server · 8 studenten · echte opdrachtgever</p>
     </div>
 </section>
 
@@ -72,22 +72,27 @@
             <span class="week-badge">01. Beschrijving van de case</span>
         </div>
         <div class="week-content">
-            <h3 class="section-title">🏺 De opdrachtgever</h3>
+            <h3 class="section-title">De opdrachtgever</h3>
             <p class="card-text">
-                Pop &amp; Clay is een lokaal bedrijf dat workshops en handgemaakte producten rond kleiboetseren aanbiedt. De eigenaresse is een gedreven ondernemer die haar volledige aanwezigheid (productpromoting, workshops, klantcommunicatie) uitsluitend via Instagram beheerde. Dat werkte in het begin, maar naarmate het bedrijf groeide werd het beheer omslachtig en onprofessioneel: geen centrale inventaris, geen apart klantportaal, geen efficiënt productbeheer.
+                Pop &amp; Clay is een lokaal bedrijf dat workshops en handgemaakte producten rond kleiboetseren aanbiedt. Vóór ons project beheerde de eigenaresse haar volledige digitale aanwezigheid uitsluitend via Instagram: geen eigen website, geen centrale productcatalogus, geen klantportaal en geen systeem om bestellingen of gebruikers bij te houden. Dat werkte aanvankelijk, maar naarmate het bedrijf groeide werd het beheer te omslachtig en onprofessioneel voor een groeiend klantenbestand.
             </p>
-            <h3 class="section-title">🎯 De opdracht</h3>
+            <h3 class="section-title">De opdracht</h3>
             <p class="card-text">
-                Wij kregen de opdracht om een volwaardige webapplicatie te bouwen waarmee Pop &amp; Clay haar digitale aanwezigheid kon professionaliseren. De website moest drie types gebruikers ondersteunen met elk hun eigen omgeving en rechten:
+                Wij kregen de opdracht om een volwaardige webapplicatie te bouwen die drie gebruikerstypes ondersteunt: klanten die het productaanbod kunnen bekijken, medewerkers die producten en bestellingen beheren via een beveiligd portaal, en een administrator die het volledige platform beheert, inclusief gebruikersbeheer, medewerkersbeheer, een loginlogboek en systeeminstellingen. Elke gebruikersrol heeft eigen schermen, eigen rechten en een eigen toegangsniveau.
             </p>
-            <ul class="content-list">
-                <li><strong>Klanten</strong>: kunnen het productaanbod bekijken en doorbladeren zonder in te loggen</li>
-                <li><strong>Medewerkers</strong>: kunnen producten aanmaken, bewerken en beheren via een beveiligd portaal</li>
-                <li><strong>Admin</strong>: beheert het volledige platform, gebruikersbeheer, productcategorieën en systeeminstellingen</li>
-            </ul>
-            <h3 class="section-title">👥 Het team</h3>
+            <h3 class="section-title">De technologiestack</h3>
             <p class="card-text">
-                We werkten met acht studenten uit drie richtingen: vier programmeurs, één webstudent en drie studenten digitale vormgeving. De vormgevers zorgden voor het visuele ontwerp, de UX-wireframes en de huisstijl op basis van de briefing van de opdrachtgever. De webstudent bouwde de publieke klantfacing frontend. De vier programmeurs, waaronder ik, waren verantwoordelijk voor de backend-logica, de database-architectuur, de REST API en de beheerschermen.
+                Het project was opgesplitst in afzonderlijke onderdelen. De publieke klantfacing website werd verzorgd door de webstudent in het team. De programmeurs concentreerden zich op het admin dashboard, de backend API en de database.
+            </p>
+            <p class="card-text">
+                Het admin dashboard is gebouwd in HTML, CSS en vanilla JavaScript. Er is geen frontend-framework gebruikt: alle interactie, formuliervalidatie, routing tussen schermen en API-communicatie verlopen via zelfgeschreven JavaScript met de Fetch API en session storage voor tokenbeheer. De interface bevat schermen voor gebruikersbeheer, medewerkersbeheer, productbeheer, bestellingenbeheer, een loginlogboek en profielbeheer.
+            </p>
+            <p class="card-text">
+                De backend is een ASP.NET Core Web API, geschreven in C# op .NET 8. Authenticatie verloopt via JWT-tokens en wachtwoorden worden opgeslagen als bcrypt-hashes. Toegangscontrole is role-based: admin, medewerker en gebruiker hebben elk andere rechten op de endpoints. De API documenteert zichzelf via Swagger/OpenAPI. Intern is de backend gestructureerd met het repository pattern en dependency injection. De database draait op SQL Server en bevat tabellen voor gebruikers, medewerkers, producten, bestellingen, adressen, reviews en loginlogs.
+            </p>
+            <h3 class="section-title">Het team</h3>
+            <p class="card-text">
+                We werkten met acht studenten uit drie richtingen: vier programmeurs, één webstudent en drie studenten digitale vormgeving. De vormgevers zorgden voor het visuele ontwerp, de UX-wireframes en de huisstijl op basis van de briefing van de opdrachtgever. De webstudent bouwde de publieke klantfacing frontend. De vier programmeurs, waaronder ik, waren verantwoordelijk voor de backend-logica, de database-architectuur, de REST API en het admin dashboard.
             </p>
         </div>
     </div>
@@ -98,24 +103,29 @@
             <span class="week-badge">02. Mijn aandeel</span>
         </div>
         <div class="week-content">
-            <h3 class="section-title">💼 Mijn rol</h3>
+            <h3 class="section-title">Mijn rol</h3>
             <p class="card-text">
-                Als programmeur lag mijn focus op de verbinding tussen de database en de applicatielaag, en op het bouwen van de beheerschermen waarmee medewerkers en admins producten kunnen beheren. Ik werkte full-stack op de beheermodule: van SQL stored procedures tot Vue.js-componenten in de frontend.
+                Binnen het team van acht waren vier programmeurs verantwoordelijk voor de backend, de database en het admin dashboard. Mijn aandeel lag over de volle breedte van die stack.
             </p>
 
-            <h3 class="section-title">🖥️ Frontend: Vue.js</h3>
+            <h3 class="section-title">Frontend: HTML, CSS en JavaScript</h3>
             <p class="card-text">
-                Ik bouwde de product-beheerschermen als herbruikbare Vue.js-componenten. Producten aanmaken, bewerken en verwijderen verloopt via dynamische formulieren die in real-time communiceren met de REST API. Ik werkte met reactieve state-management en zorgde voor gebruiksvriendelijke foutafhandeling zodat medewerkers altijd duidelijke feedback krijgen bij validatiefouten of serverfouten.
+                Aan de frontendzijde van het admin dashboard werkte ik aan schermen voor bestellingenbeheer en gebruikersbeheer. Dat omvatte het opbouwen van overzichtsschermen met dynamisch geladen data via de Fetch API, formulieren voor het aanmaken en bewerken van records, client-side invoervalidatie en foutafhandeling bij API-responses. De authenticatieflow aan de frontendzijde, inclusief het opslaan van het JWT-token in session storage, het uitlezen van de gebruikersrol en het doorsturen naar het juiste scherm, was een onderdeel waar ik aan werkte en waarbij ik ook foutopsporing deed tussen de JavaScript-code en de backend.
             </p>
 
-            <h3 class="section-title">⚙️ Backend: C# .NET</h3>
+            <h3 class="section-title">Backend: C# ASP.NET Core</h3>
             <p class="card-text">
-                De backend is opgebouwd als een gestructureerde C# .NET-applicatie met class libraries voor een strikte scheiding van verantwoordelijkheden. Ik implementeerde controller-klassen, domeinmodellen (Product, Category, User) en service-klassen als aparte lagen. Via <code>HttpClient</code> worden API-requests vanuit de frontend verwerkt naar de databank. OOP-principes zoals encapsulatie, klasse-overerving en interfaces structureren de volledige codebase.
+                Aan de backendzijde werkte ik mee aan de API-endpoints voor de modules waaraan ik bijdroeg, inclusief de opzet van controller-klassen, de repository-implementaties en de koppeling met de database. Ik paste het repository pattern toe zoals dat in het project was afgesproken en werkte met dependency injection voor de koppeling van services.
             </p>
 
-            <h3 class="section-title">🗄️ Database: SQL</h3>
+            <h3 class="section-title">Database: SQL Server</h3>
             <p class="card-text">
-                Ik ontwierp en implementeerde het databaseschema in SQL. Dat omvatte het schrijven van DDL (tabellen, constraints, foreign keys), het aanmaken van indexes voor query-optimalisatie en sequences voor auto-increment sleutels. Alle CRUD-logica loopt via stored procedures die ik zelf heb ontworpen, getest en gedocumenteerd, zodat de applicatielaag enkel de procedurenaam en parameters hoeft door te geven en de database-logica volledig ingekapseld blijft.
+                Voor de database droeg ik bij aan het opzetten van een deel van het schema en het schrijven van de bijhorende queries. Ik testte de koppeling via Swagger voor de frontend erop werd aangesloten. Dat testen was nuttig: het maakte duidelijk welke endpoints correct functioneerden en welke nog bijgestuurd moesten worden, voor het eigenlijke integratiewerk begon.
+            </p>
+
+            <h3 class="section-title">Samenwerking en afstemming</h3>
+            <p class="card-text">
+                Buiten het technische werk leerde ik in dit project dat afstemming minstens zo belangrijk is als code schrijven. Vroeg in het project stelde ik mee voor om gezamenlijk de datamodellen en de structuur van de API-endpoints vast te leggen. Die afspraak heeft later integratieproblemen vermeden. Ik leerde ook dat het bewaken van een gedeelde structuur, consequente naamgevingsconventies en afgesproken respons-formaten, in een teamproject een groter effect heeft dan ik in een solo-project ooit had kunnen ervaren.
             </p>
         </div>
     </div>
@@ -155,35 +165,35 @@
         <div class="week-content">
             <h3 class="section-title">🚀 Het eindproduct</h3>
             <p class="card-text">
-                Het eindresultaat is een volledige webapplicatie voor Pop &amp; Clay met drie afzonderlijke gebruikersomgevingen. Klanten kunnen het productaanbod bekijken, medewerkers beheren producten via een intuïtief beheerpaneel en de admin heeft volledige controle over het platform. De applicatie is gebouwd met Vue.js in de frontend, een C# .NET backend met class libraries, Dapper als data-toegangslaag en een SQL-database met stored procedures.
+                Het eindresultaat is een volledige webapplicatie voor Pop &amp; Clay met drie afzonderlijke gebruikersomgevingen. Klanten kunnen het productaanbod bekijken, medewerkers en admins beheren het platform via een admin dashboard gebouwd in HTML, CSS en vanilla JavaScript. De backend is een ASP.NET Core Web API in C# met JWT-authenticatie, bcrypt en role-based access control. De database draait op SQL Server.
             </p>
 
             <div class="result-tech-grid">
                 <div class="result-tech-item">
-                    <span class="result-tech-icon">🟢</span>
+                    <span class="result-tech-icon">🟡</span>
                     <div>
-                        <div class="result-tech-name">Vue.js</div>
-                        <div class="result-tech-desc">Reactieve UI-componenten voor het beheerpaneel</div>
+                        <div class="result-tech-name">HTML / CSS / JavaScript</div>
+                        <div class="result-tech-desc">Admin dashboard — vanilla, geen framework</div>
                     </div>
                 </div>
                 <div class="result-tech-item">
                     <span class="result-tech-icon">🔵</span>
                     <div>
-                        <div class="result-tech-name">C# .NET</div>
-                        <div class="result-tech-desc">Backend API met class libraries &amp; OOP</div>
+                        <div class="result-tech-name">C# ASP.NET Core</div>
+                        <div class="result-tech-desc">Web API met JWT, bcrypt &amp; Swagger</div>
                     </div>
                 </div>
                 <div class="result-tech-item">
                     <span class="result-tech-icon">🟣</span>
                     <div>
-                        <div class="result-tech-name">Dapper + SQL</div>
-                        <div class="result-tech-desc">DDL, stored procedures, indexes &amp; sequences</div>
+                        <div class="result-tech-name">SQL Server</div>
+                        <div class="result-tech-desc">Repository pattern &amp; dependency injection</div>
                     </div>
                 </div>
                 <div class="result-tech-item">
                     <span class="result-tech-icon">🌐</span>
                     <div>
-                        <div class="result-tech-name">HttpClient</div>
+                        <div class="result-tech-name">Fetch API</div>
                         <div class="result-tech-desc">REST API-communicatie frontend ↔ backend</div>
                     </div>
                 </div>
