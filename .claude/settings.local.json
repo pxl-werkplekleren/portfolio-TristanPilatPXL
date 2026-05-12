@@ -1,8 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(sort -k6,7)",
-      "Read(//c/Users/Trist/**)"
-    ]
-  }
-}
