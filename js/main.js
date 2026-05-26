@@ -207,16 +207,9 @@ function initCounters() {
 function initCardTilt() {
     const cards = document.querySelectorAll('.card, .project-card, .hobby-card, .info-card');
     cards.forEach(card => {
-        card.style.transformStyle = 'preserve-3d';
-
-        card.addEventListener('mousemove', e => {
-            const r  = card.getBoundingClientRect();
-            const x  = e.clientX - r.left - r.width  / 2;
-            const y  = e.clientY - r.top  - r.height / 2;
-            const rx = -(y / (r.height / 2)) * 7;
-            const ry =  (x / (r.width  / 2)) * 7;
-            card.style.transform = `translateY(-6px) rotateX(${rx}deg) rotateY(${ry}deg)`;
-            card.style.transition = 'transform 0.1s ease';
+        card.addEventListener('mouseenter', () => {
+            card.style.transform = 'translateY(-6px) scale(1.02)';
+            card.style.transition = 'transform 0.2s cubic-bezier(0.16,1,0.3,1)';
         });
 
         card.addEventListener('mouseleave', () => {

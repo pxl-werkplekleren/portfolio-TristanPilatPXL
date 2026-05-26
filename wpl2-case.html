@@ -199,8 +199,36 @@
                 </div>
             </div>
 
-            <div class="project-img-placeholder" style="height:180px;border-radius:12px;margin:24px 0;" aria-label="Schermafbeelding eindproduct">
-                <span style="font-size:1rem;color:#94a3b8;">📸 Screenshots volgen na oplevering</span>
+            <div class="demo-carousel">
+                <div class="carousel-window">
+                    <div class="carousel-track" id="demoTrack">
+                        <div class="carousel-slide">
+                            <video controls class="carousel-video" aria-label="Demo video Pop &amp; Clay applicatie">
+                                <source src="Images/pop&amp;clay_demo.mp4" type="video/mp4">
+                                Je browser ondersteunt geen video.
+                            </video>
+                        </div>
+                        <div class="carousel-slide">
+                            <button class="project-img-btn" aria-label="Afbeelding vergroten: loyale klant korting">
+                                <img src="Images/loyalklant_discount.png" alt="Loyale klant kortingssysteem" class="carousel-img" loading="lazy">
+                                <span class="project-img-zoom" aria-hidden="true">🔍</span>
+                            </button>
+                        </div>
+                        <div class="carousel-slide">
+                            <button class="project-img-btn" aria-label="Afbeelding vergroten: ERD">
+                                <img src="Images/erddatabse.png" alt="Entity Relationship Diagram van de Pop &amp; Clay database" class="carousel-img" loading="lazy">
+                                <span class="project-img-zoom" aria-hidden="true">🔍</span>
+                            </button>
+                        </div>
+                    </div>
+                    <button class="carousel-btn carousel-prev" aria-label="Vorige slide">&#8249;</button>
+                    <button class="carousel-btn carousel-next" aria-label="Volgende slide">&#8250;</button>
+                </div>
+                <div class="carousel-bar" id="demoDots">
+                    <button class="carousel-dot active" aria-label="Slide 1: Demo video"></button>
+                    <button class="carousel-dot" aria-label="Slide 2: Loyale klant korting"></button>
+                    <button class="carousel-dot" aria-label="Slide 3: ERD"></button>
+                </div>
             </div>
 
             <h3 class="section-title">Downloads &amp; Links</h3>
@@ -218,7 +246,40 @@
 <footer>
     <p>&copy; 2026 Tristan Pilat — Graduaat Programmeren · Hogeschool PXL</p>
 </footer>
+<!-- ── Lightbox ── -->
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Afbeelding vergroot" hidden>
+    <div id="lightbox-backdrop"></div>
+    <div id="lightbox-content">
+        <button id="lightbox-close" aria-label="Sluiten">✕</button>
+        <img id="lightbox-img" src="" alt="">
+    </div>
+</div>
+
 <script src="js/nav.js"></script>
 <script src="js/main.js"></script>
+<script src="js/lightbox.js"></script>
+<script>
+(function () {
+    const track = document.getElementById('demoTrack');
+    const dots  = document.querySelectorAll('#demoDots .carousel-dot');
+    if (!track) return;
+    let cur = 0;
+    const total = track.children.length;
+
+    function goTo(n) {
+        if (cur === 0) {
+            const vid = track.children[0].querySelector('video');
+            if (vid) vid.pause();
+        }
+        cur = (n + total) % total;
+        track.style.transform = 'translateX(-' + (cur * 100) + '%)';
+        dots.forEach(function (d, i) { d.classList.toggle('active', i === cur); });
+    }
+
+    document.querySelector('.carousel-prev').addEventListener('click', function () { goTo(cur - 1); });
+    document.querySelector('.carousel-next').addEventListener('click', function () { goTo(cur + 1); });
+    dots.forEach(function (d, i) { d.addEventListener('click', function () { goTo(i); }); });
+})();
+</script>
 </body>
 </html>
