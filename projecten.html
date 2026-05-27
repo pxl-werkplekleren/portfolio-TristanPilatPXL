@@ -65,6 +65,7 @@
             <button class="filter-btn active" data-filter="all">Alles</button>
             <button class="filter-btn" data-filter="wpl1">WPL1</button>
             <button class="filter-btn" data-filter="wpl2">WPL2</button>
+            <button class="filter-btn" data-filter="persoonlijk">Persoonlijk</button>
         </div>
 
         <!-- Featured WPL2 project -->
@@ -291,7 +292,35 @@
                 </div>
             </article>
 
-            <!-- Project 9: MAUI App -->
+            <!-- Project 9: Pokédex WPF App -->
+            <article class="project-card" data-wpl="persoonlijk">
+                <button class="project-img-btn" aria-label="Afbeelding vergroten">
+                    <img src="Images/pokedex-demo.gif" alt="Pokédex WPF applicatie demo" class="project-img" loading="lazy">
+                    <span class="project-img-zoom" aria-hidden="true">🔍</span>
+                </button>
+                <div class="project-body">
+                    <h2 class="project-title">Pokédex WPF Applicatie</h2>
+                    <div class="project-tech" aria-label="Gebruikte technologieën">
+                        <span class="tech-badge wpl-tag wpl-tag-p">Persoonlijk</span>
+                        <span class="tech-badge">C#</span>
+                        <span class="tech-badge">WPF</span>
+                        <span class="tech-badge">.NET</span>
+                        <span class="tech-badge">HttpClient</span>
+                        <span class="tech-badge">REST API</span>
+                    </div>
+                    <p class="project-desc">
+                        Een Pokédex-applicatie gebouwd in C# met WPF. De app haalt live Pokémon-data op via de PokéAPI met behulp van HttpClient en toont per Pokémon de naam, afbeelding en statistieken in een grafische interface.
+                    </p>
+                    <p class="project-desc">
+                        Dit project combineerde mijn kennis van WPF met asynchrone HTTP-verzoeken: data ophalen van een externe API, JSON deserialiseren en dynamisch weergeven in de interface. Het leerde mij hoe je een desktop-applicatie verbindt met een externe webservice.
+                    </p>
+                    <div class="project-learned">
+                        <strong>Wat ik leerde:</strong> HttpClient gebruiken voor REST API-aanroepen, JSON verwerken in C#, async/await in een WPF-context, dynamische UI-updates op basis van API-data.
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 10: MAUI App -->
             <article class="project-card" data-wpl="wpl2">
                 <button class="project-img-btn" aria-label="Afbeelding vergroten">
                     <img src="Images/MAUI_APP_Tristan_Pilat.gif" alt="MAUI Android applicatie demo" class="project-img" loading="lazy">
