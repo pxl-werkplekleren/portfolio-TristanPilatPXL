@@ -52,7 +52,7 @@
     </div>
     <div class="page-hero-inner container">
         <h1 class="page-hero-title">WPL2 Case: Pop &amp; Clay</h1>
-        <p class="page-hero-sub">Teamproject · HTML / CSS / JS · C# ASP.NET Core · SQL Server · 8 studenten · echte opdrachtgever</p>
+        <p class="page-hero-sub">Gesimuleerde stage · HTML / CSS / JS · C# ASP.NET Core 4-lagen · Vue.js · SQL Server · 8 studenten</p>
     </div>
 </section>
 
@@ -72,27 +72,19 @@
             <span class="week-badge">01. Beschrijving van de case</span>
         </div>
         <div class="week-content">
-            <h3 class="section-title">De opdrachtgever</h3>
             <p class="card-text">
-                Pop &amp; Clay is een lokaal bedrijf dat workshops en handgemaakte producten rond kleiboetseren aanbiedt. Vóór ons project beheerde de eigenaresse haar volledige digitale aanwezigheid uitsluitend via Instagram: geen eigen website, geen centrale productcatalogus, geen klantportaal en geen systeem om bestellingen of gebruikers bij te houden. Dat werkte aanvankelijk, maar naarmate het bedrijf groeide werd het beheer te omslachtig en onprofessioneel voor een groeiend klantenbestand.
+                Pop &amp; Clay is een lokaal bedrijf dat workshops en handgemaakte producten rond kleiboetseren aanbiedt. De eigenaresse regelde alles via Instagram: geen eigen website, geen productcatalogus, geen manier om bestellingen of klanten bij te houden. Dat werkte ooit, maar niet meer. Onze taak was om daar verandering in te brengen.
             </p>
-            <h3 class="section-title">De opdracht</h3>
+            <h3 class="section-title">Het team en de rolverdeling</h3>
             <p class="card-text">
-                Wij kregen de opdracht om een volwaardige webapplicatie te bouwen die drie gebruikerstypes ondersteunt: klanten die het productaanbod kunnen bekijken, medewerkers die producten en bestellingen beheren via een beveiligd portaal, en een administrator die het volledige platform beheert, inclusief gebruikersbeheer, medewerkersbeheer, een loginlogboek en systeeminstellingen. Elke gebruikersrol heeft eigen schermen, eigen rechten en een eigen toegangsniveau.
+                WPL2 was een gesimuleerde stage waarbij acht studenten uit drie richtingen samenwerkten als één team met een echte opdrachtgever. De drie studenten Digitale Vormgeving namen het UX-traject voor hun rekening: benchmarks, doelgroepanalyse, wireframes en de volledige visuele huisstijl. Zij bepaalden hoe de applicatie er moest uitzien en aanvoelen. De webstudent bouwde de publieke webshop op basis van dat ontwerp in Vue.js. Wij als programmeurs waren verantwoordelijk voor alles erachter: de backend, de database en het admin dashboard.
             </p>
-            <h3 class="section-title">De technologiestack</h3>
+            <h3 class="section-title">Wat er gebouwd werd</h3>
             <p class="card-text">
-                Het project was opgesplitst in afzonderlijke onderdelen. De publieke klantfacing website werd verzorgd door de webstudent in het team. De programmeurs concentreerden zich op het admin dashboard, de backend API en de database.
-            </p>
-            <p class="card-text">
-                Het admin dashboard is gebouwd in HTML, CSS en vanilla JavaScript. Er is geen frontend-framework gebruikt: alle interactie, formuliervalidatie, routing tussen schermen en API-communicatie verlopen via zelfgeschreven JavaScript met de Fetch API en session storage voor tokenbeheer. De interface bevat schermen voor gebruikersbeheer, medewerkersbeheer, productbeheer, bestellingenbeheer, een loginlogboek en profielbeheer.
+                De backend is een ASP.NET Core Web API in C#, opgebouwd in vier lagen: Domain, Application, Infrastructure en WebAPI. Die opdeling zorgt ervoor dat elke laag zijn eigen verantwoordelijkheid heeft en niet door de andere loopt. Authenticatie verloopt via JWT-tokens, wachtwoorden worden gehasht met bcrypt en de toegangscontrole is role-based: admin, medewerker en klant hebben elk andere rechten. De API documenteert zichzelf via Swagger.
             </p>
             <p class="card-text">
-                De backend is een ASP.NET Core Web API, geschreven in C# op .NET 8. Authenticatie verloopt via JWT-tokens en wachtwoorden worden opgeslagen als bcrypt-hashes. Toegangscontrole is role-based: admin, medewerker en gebruiker hebben elk andere rechten op de endpoints. De API documenteert zichzelf via Swagger/OpenAPI. Intern is de backend gestructureerd met het repository pattern en dependency injection. De database draait op SQL Server en bevat tabellen voor gebruikers, medewerkers, producten, bestellingen, adressen, reviews en loginlogs.
-            </p>
-            <h3 class="section-title">Het team</h3>
-            <p class="card-text">
-                We werkten met acht studenten uit drie richtingen: vier programmeurs, één webstudent en drie studenten digitale vormgeving. De vormgevers zorgden voor het visuele ontwerp, de UX-wireframes en de huisstijl op basis van de briefing van de opdrachtgever. De webstudent bouwde de publieke klantfacing frontend. De vier programmeurs, waaronder ik, waren verantwoordelijk voor de backend-logica, de database-architectuur, de REST API en het admin dashboard.
+                Het admin dashboard is gebouwd in HTML, CSS en vanilla JavaScript, zonder frontend-framework. De schermen, formulieren en communicatie met de API zijn zelfgeschreven, maar voor specifieke functionaliteit hebben we bewust externe packages en diensten gebruikt: Stripe voor betalingsverwerking, Mailtrap voor e-mailverzendingen en Flowise voor de AI-chatbot. AI werd ook ingezet als werktool tijdens de ontwikkeling. Het dashboard bevat modules voor gebruikersbeheer, medewerkersbeheer, productbeheer, bestellingen en een loginlogboek. De database draait op SQL Server.
             </p>
         </div>
     </div>
@@ -103,29 +95,28 @@
             <span class="week-badge">02. Mijn aandeel</span>
         </div>
         <div class="week-content">
-            <h3 class="section-title">Mijn rol</h3>
             <p class="card-text">
-                Binnen het team van acht waren vier programmeurs verantwoordelijk voor de backend, de database en het admin dashboard. Mijn aandeel lag over de volle breedte van die stack.
+                Mijn werk reikte van de database tot de frontend, dwars door de hele stack.
             </p>
 
-            <h3 class="section-title">Frontend: HTML, CSS en JavaScript</h3>
+            <h3 class="section-title">Admin dashboard: HTML, CSS en JavaScript</h3>
             <p class="card-text">
-                Aan de frontendzijde van het admin dashboard werkte ik aan schermen voor bestellingenbeheer en gebruikersbeheer. Dat omvatte het opbouwen van overzichtsschermen met dynamisch geladen data via de Fetch API, formulieren voor het aanmaken en bewerken van records, client-side invoervalidatie en foutafhandeling bij API-responses. De authenticatieflow aan de frontendzijde, inclusief het opslaan van het JWT-token in session storage, het uitlezen van de gebruikersrol en het doorsturen naar het juiste scherm, was een onderdeel waar ik aan werkte en waarbij ik ook foutopsporing deed tussen de JavaScript-code en de backend.
+                In het admin dashboard bouwde ik de schermen voor bestellingenbeheer en gebruikersbeheer. Zonder framework schrijf je alles zelf, en dat merk je: elke tabel, elk formulier, elke validatie en elke foutmelding moest ik zelf opbouwen. Data laadde ik op via de Fetch API, communicatie met de backend verliep via authenticated requests met een JWT-token in de header. De loginflow, het bijhouden van de sessie in session storage en het doorsturen naar het juiste scherm op basis van de gebruikersrol, waren onderdelen waar ik ook foutopsporing op deed tussen de JavaScript-kant en de backend.
             </p>
 
             <h3 class="section-title">Backend: C# ASP.NET Core</h3>
             <p class="card-text">
-                Aan de backendzijde werkte ik mee aan de API-endpoints voor de modules waaraan ik bijdroeg, inclusief de opzet van controller-klassen, de repository-implementaties en de koppeling met de database. Ik paste het repository pattern toe zoals dat in het project was afgesproken en werkte met dependency injection voor de koppeling van services.
+                Voor de modules die ik in het dashboard had gebouwd, schreef ik ook de bijbehorende backend. Dat betekende controller-klassen, repository-implementaties en de koppeling daartussen via dependency injection, allemaal binnen de vierlagenstructuur die we als team hadden vastgelegd. Die structuur was in het begin even wennen, maar het hield de code overzichtelijk naarmate het project groeide.
             </p>
 
-            <h3 class="section-title">Database: SQL Server</h3>
+            <h3 class="section-title">Database en testen</h3>
             <p class="card-text">
-                Voor de database droeg ik bij aan het opzetten van een deel van het schema en het schrijven van de bijhorende queries. Ik testte de koppeling via Swagger voor de frontend erop werd aangesloten. Dat testen was nuttig: het maakte duidelijk welke endpoints correct functioneerden en welke nog bijgestuurd moesten worden, voor het eigenlijke integratiewerk begon.
+                Voor de database droeg ik bij aan het schema en de bijhorende queries. Ik testte de endpoints via Swagger voor de frontend erop werd aangesloten. Dat was een goede gewoonte: kleine problemen werden zichtbaar voor ze echte integratieproblemen werden.
             </p>
 
-            <h3 class="section-title">Samenwerking en afstemming</h3>
+            <h3 class="section-title">Wat ik meeneem</h3>
             <p class="card-text">
-                Buiten het technische werk leerde ik in dit project dat afstemming minstens zo belangrijk is als code schrijven. Vroeg in het project stelde ik mee voor om gezamenlijk de datamodellen en de structuur van de API-endpoints vast te leggen. Die afspraak heeft later integratieproblemen vermeden. Ik leerde ook dat het bewaken van een gedeelde structuur, consequente naamgevingsconventies en afgesproken respons-formaten, in een teamproject een groter effect heeft dan ik in een solo-project ooit had kunnen ervaren.
+                Iets wat me is bijgebleven: afstemming is net zo waardevol als code schrijven. Ik stelde vroeg in het project mee voor om samen de datamodellen en API-structuur vast te leggen voor we afzonderlijk aan de slag gingen. Dat heeft achteraf concrete problemen vermeden. In een team van acht mensen uit drie richtingen merk je snel dat een duidelijke gedeelde afspraak meer waard is dan individueel snel werken.
             </p>
         </div>
     </div>
@@ -180,21 +171,42 @@
                     <span class="result-tech-icon">🔵</span>
                     <div>
                         <div class="result-tech-name">C# ASP.NET Core</div>
-                        <div class="result-tech-desc">Web API met JWT, bcrypt &amp; Swagger</div>
+                        <div class="result-tech-desc">4-lagen (Domain / Application / Infrastructure / WebAPI) · JWT · bcrypt</div>
+                    </div>
+                </div>
+                <div class="result-tech-item">
+                    <span class="result-tech-icon">🟢</span>
+                    <div>
+                        <div class="result-tech-name">Vue.js</div>
+                        <div class="result-tech-desc">Publieke webshop — gebouwd door de webstudent</div>
                     </div>
                 </div>
                 <div class="result-tech-item">
                     <span class="result-tech-icon">🟣</span>
                     <div>
                         <div class="result-tech-name">SQL Server</div>
-                        <div class="result-tech-desc">Repository pattern &amp; dependency injection</div>
+                        <div class="result-tech-desc">Relationeel schema · repository pattern · dependency injection</div>
                     </div>
                 </div>
                 <div class="result-tech-item">
-                    <span class="result-tech-icon">🌐</span>
+                    <span class="result-tech-icon">💳</span>
                     <div>
-                        <div class="result-tech-name">Fetch API</div>
-                        <div class="result-tech-desc">REST API-communicatie frontend ↔ backend</div>
+                        <div class="result-tech-name">Stripe</div>
+                        <div class="result-tech-desc">Betalingsverwerking</div>
+                    </div>
+                </div>
+                <div class="result-tech-item">
+                    <span class="result-tech-icon">📧</span>
+                    <div>
+                        <div class="result-tech-name">Mailtrap</div>
+                        <div class="result-tech-desc">E-mailverzendingen</div>
+                    </div>
+                </div>
+                <div class="result-tech-item">
+                    <span class="result-tech-icon">🤖</span>
+                    <div>
+                        <div class="result-tech-name">Flowise AI</div>
+                        <div class="result-tech-desc">AI-chatbot integratie</div>
                     </div>
                 </div>
             </div>
@@ -234,8 +246,8 @@
 
             <h3 class="section-title">Downloads &amp; Links</h3>
             <div class="project-links" style="margin-top:12px;">
-                <a href="#" class="btn btn-primary">📄 Eindreflectie (PDF)</a>
-                <a href="#" class="btn btn-outline">📊 Presentatieslides</a>
+                <a href="wpl2-eindreflectie.pdf" target="_blank" class="btn btn-primary">📄 Eindreflectie (PDF)</a>
+                <a href="Pop-and-Clay-sprint-3-finaal.pptx" download class="btn btn-outline">📊 Presentatieslides</a>
                 <a href="https://github.com/TristanPilatPXL" target="_blank" rel="noopener noreferrer" class="btn btn-outline">💻 GitHub</a>
             </div>
         </div>
